@@ -7,14 +7,14 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    name: 👌 Listingslab Automated Test
+    name: 👌 Listingslab AI Test
     runs-on: ubuntu-latest
 
     steps:
-      - name: 🦹‍♀️ 超级反派女人
+      - name: 🦹‍♀️ Checkout
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
-      - name: 👼 天使
+      - name: 👼 React jest suite
         run: cd react-app && npm install && npm test
