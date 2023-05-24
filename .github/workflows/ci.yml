@@ -17,4 +17,4 @@ jobs:
           fetch-depth: 0
 
       - name: 👼 天使
-        run: npm test
+        run: cd react-app && npm install && npm test
