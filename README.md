@@ -23,9 +23,7 @@ __"The devil is in the detail"__
 Implementation details, the handling of edge cases, and your coding style are three of the major things that we value. We'd also love to see automated tests as part of your solution. Please pay special attention to:
 ​
 - Logic and code complexity - How easy will my code be for it to be maintained by someone else? Am I using good practices and proper design patterns?
-
 - Test coverage - Is my code tested? Are all scenarios considered?
-
 - Requirement coverage - Is the application doing what it is meant to be doing?
 
 #### Bonus points
