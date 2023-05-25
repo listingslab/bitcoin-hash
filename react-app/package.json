@@ -1,6 +1,6 @@
 {
   "name": "bitcoin-hash",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.16.5",
