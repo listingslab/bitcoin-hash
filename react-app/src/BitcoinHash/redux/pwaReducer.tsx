@@ -5,7 +5,6 @@ import {
   PwaReduxShape,
 } from "../types"
 import {
-  locales,
   theme,
 } from "../"
 
@@ -14,7 +13,6 @@ const initialState: PwaReduxShape = {
   sitemap: true,
   locale: "en",
   theme,
-  locales,
 }
 
 export const pwaSlice = createSlice({

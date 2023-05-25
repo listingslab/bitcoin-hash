@@ -35,7 +35,6 @@ export type LocaleShape = {
 export type PwaReduxShape = {
   started: boolean
   locale: string
-  locales: Array<LocaleShape>
   persisted?: boolean
   theme: ThemeShape
   sitemap: boolean

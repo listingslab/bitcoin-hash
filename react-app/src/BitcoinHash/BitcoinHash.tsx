@@ -1,8 +1,6 @@
 import pJSON from "../../package.json"
 import React from 'react';
 
-
-
 function BitcoinHash() {
 
   React.useEffect(() => {
