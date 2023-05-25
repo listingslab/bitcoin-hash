@@ -560,9 +560,6 @@ export default function Icon(props: any) {
           iconFragment = <DocIcon color={color} />
           break
 
-    case "doc":
-      iconFragment = <DocIcon color={color} />
-      break
 
     case "menu":
       iconFragment = <MenuIcon color={color} />

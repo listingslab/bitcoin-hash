@@ -1,5 +1,5 @@
 import { AppThunk } from "../store"
-import { setPwaKey, navigateTo } from "../../"
+import { setPwaKey } from "../../"
 
 export const setLocale =
   (locale: string): AppThunk =>
@@ -9,7 +9,6 @@ export const setLocale =
       // setTimeout(() => {
       //   dispatch(navigateTo(`/${locale}/`, "_self"))
       // }, 100)
-      
     } catch (error: any) {
       console.log("Action error: setLocale", error)
     }

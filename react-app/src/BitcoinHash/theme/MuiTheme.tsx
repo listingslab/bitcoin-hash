@@ -1,5 +1,4 @@
 import React from "react"
-import { PaletteMode } from "@mui/material"
 import {ThemeShape} from "../types"
 import {
   usePwaSelect,
@@ -15,8 +14,6 @@ export default function MuiTheme(props: any) {
   const {children} = props
   const debug = false
   const pwa = usePwaSelect(selectPWA)
-  let locale: string|null = null
-  if (pwa) locale = pwa.locale
   const {theme} = pwa
 
   const themeOverride: ThemeShape = {

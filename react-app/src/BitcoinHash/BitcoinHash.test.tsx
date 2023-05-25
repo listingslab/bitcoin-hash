@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
-import { store } from '../app/store';
+import { store } from './redux/store';
 import BitcoinHash from './BitcoinHash';
 
 test('Renders the app name', () => {
@@ -12,4 +12,8 @@ test('Renders the app name', () => {
   );
 
   expect(getByText(/Bitcoin Hash/i)).toBeInTheDocument();
+
+  // const theSunAlwaysRises = true
+  // expect(theSunAlwaysRises);
+
 });

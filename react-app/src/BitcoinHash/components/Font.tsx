@@ -6,10 +6,11 @@ import { useTheme, Typography } from "@mui/material"
 export function Font(props: any) {
   const theme = useTheme()
   const { variant, fontSize, color, children, align, width, /*overflow*/ } = props
-  // let c = theme.palette.primary.main
-  // if (color) c = color
+  
   let textAlign = "left"
   let w: any = "100%"
+  let c = "#333"
+  if (color) c = color
   if (width) w = width
   let textfontSize: any = "1rem"
   let textFont = "Quicksand-Bold"
@@ -18,17 +19,16 @@ export function Font(props: any) {
   if (variant === "black") textFont = "Quicksand-Bold"
   if (variant === "bold") textFont = "Quicksand-Black"
   if (variant === "thin") textFont = "Quicksand-Light"
-
   if (variant === "title") {
-    lineHeight = "1.2rem"
-    textfontSize = "1.4rem"
+    textfontSize = "1.2rem"
+    lineHeight = "1.4rem"
+    c = theme.palette.primary.main
   }
-
   if (variant === "description") {
     textfontSize = "1.1rem"
     lineHeight = "1.3rem"
+    c = theme.palette.primary.main
   }
-
   if (variant === "subheader") {
     textfontSize = "1.1rem"
     lineHeight = "1.2rem"
@@ -53,7 +53,7 @@ export function Font(props: any) {
         fontFamily: textFont,
         fontSize: textfontSize,
         lineHeight,
-        // color: c,
+        color: c,
         width: w,
       }}
     >
