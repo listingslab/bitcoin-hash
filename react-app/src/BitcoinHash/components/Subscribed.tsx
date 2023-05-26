@@ -15,6 +15,7 @@ import {
 export default function Subscribed() {
   const pwa = usePwaSelect(selectPWA)
   const{subscribed} = pwa
+  if (!subscribed.length) return null
   return (<>
             <Box sx={{m:1}}>
               <Card>

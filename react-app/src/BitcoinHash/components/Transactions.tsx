@@ -13,6 +13,7 @@ import {
 export default function Transactions() {
   const pwa = usePwaSelect(selectPWA)
   const {transactions} = pwa
+  // if (!transactions.length) return null
   return (<>
             <Box sx={{m:1}}>
               <Card sx={{}}>

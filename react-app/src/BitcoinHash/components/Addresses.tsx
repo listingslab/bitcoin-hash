@@ -13,6 +13,7 @@ import {
 export default function Addresses() {
   const pwa = usePwaSelect(selectPWA)
   const {addresses} = pwa
+  if (!addresses.length) return null
   return (<>
           <Box sx={{m:1}}>
             <Card sx={{}}>

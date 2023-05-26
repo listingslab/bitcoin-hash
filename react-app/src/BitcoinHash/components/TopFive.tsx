@@ -13,6 +13,7 @@ import {
 export default function TopFive() {
   const pwa = usePwaSelect(selectPWA)
   const {topfive} = pwa
+  if (!topfive.length) return null
   return (<>
             <Box sx={{m:1}}>
               <Card sx={{}}>

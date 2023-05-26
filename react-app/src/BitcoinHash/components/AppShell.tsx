@@ -48,41 +48,37 @@ export default function AppShell() {
                           Bitcoin Hash
                         </Font>}
                   subheader={<Font>
-                        Search for/Subscribe to BTC blockchain hashes
+                        Search/Subscribe BTC blockchain hashes
                       </Font>}
                   action={<>
-                    <CurrencyMenu />
+                    <Box sx={{display:"flex"}}>
+                        <Box sx={{flexGrow:1}} />
+                        <IconButton
+                          sx={{mt:-1}}
+                          onClick={(e: React.MouseEvent) => {
+                            e.preventDefault()
+                            window.open(`https://github.com/listingslab/bitcoin-hash`, "_blank")
+                        }}>
+                          <Icon icon="github" />
+                        </IconButton>
+                        <CurrencyMenu />
+                    </Box>
                   </>} 
                 />
               </Card>
             </Box>
                 
-                
-                
-                <Grid container sx={{mt:-1}}>
-                  <Grid item xs={12} sm={4}>
-                    <Subscribed />
-                    <TopFive />
-                  </Grid>
-                  <Grid item xs={12} sm={8}>
-                    <Addresses />
-                    <Transactions />
-                  </Grid>
-                </Grid>
+            <Grid container sx={{mt:-1}}>
+              <Grid item xs={12} sm={4}>
+                <Subscribed />
+                <TopFive />
+              </Grid>
+              <Grid item xs={12} sm={8}>
+                <Addresses />
+                <Transactions />
+              </Grid>
+            </Grid>
           
-              
-              <Box sx={{display:"flex"}}>
-                  <Box sx={{flexGrow:1}} />
-                  <IconButton
-                    onClick={(e: React.MouseEvent) => {
-                      e.preventDefault()
-                      window.open(`https://github.com/listingslab/bitcoin-hash`, "_blank")
-                  }}>
-                    <Icon icon="github" />
-                  </IconButton>
-                  <Box sx={{flexGrow:1}} />
-              </Box>
-
           </>)
 }
 
