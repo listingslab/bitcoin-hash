@@ -1,2 +1,1 @@
 ## Bitcoin Hash
-
