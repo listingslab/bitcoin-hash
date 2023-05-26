@@ -1,4 +1,7 @@
 #### Step 4
+
+> As a developer I need to find a free API service to develop a prototype react app which retrieves and renders address and transaction information from the BTC blockchain. Ideally the service would include GraphQL and WebSockets
+
 ## GraphQL Bitquery API
 
 - https://bitquery.io/about
