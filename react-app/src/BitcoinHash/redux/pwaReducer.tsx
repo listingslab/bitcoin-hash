@@ -10,7 +10,11 @@ import {
 
 const initialState: PwaReduxShape = {
   started: false,
-  currency: "EUR",
+  currency: {
+    code: "EUR",
+    name: "Euros",
+    icon: "/svg/euros.svg",
+  },
   theme,
 }
 

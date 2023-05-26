@@ -16,9 +16,8 @@ import {selectPWA, setPwaKey} from "./redux/pwaReducer"
 import {store} from "./redux/store"
 import {persistor} from "./redux/store"
 import { startApp } from "./redux/actions/startApp"
-import { setLocale } from "./redux/actions/setLocale"
-import { setOpen } from "./redux/actions/setOpen"
-import { navigateTo } from "./redux/actions/navigateTo"
+import { setCurrency } from "./redux/actions/setCurrency"
+import { getBitquery } from "./redux/actions/getBitquery"
 
 export {
   BitcoinHash,
@@ -40,7 +39,6 @@ export {
   Font,
   selectPWA,
   startApp,
-  setLocale,
-  navigateTo,
-  setOpen,
+  setCurrency,
+  getBitquery,
 }
