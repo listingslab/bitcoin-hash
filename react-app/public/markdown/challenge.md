@@ -1,7 +1,6 @@
 ## Code Challenge for Full Stack JavaScript Developers
 
-> Although the challenge is a real world example, references to 
-the company for whom it was done have been removed to privacy reasons
+> Although this is a real world example, references to the company for whom it was done have been removed to privacy reasons
 
 #### Introduction
 
