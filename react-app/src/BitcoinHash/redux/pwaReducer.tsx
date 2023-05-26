@@ -6,15 +6,13 @@ import {
 } from "../types"
 import {
   theme,
+  currencies,
 } from "../"
 
 const initialState: PwaReduxShape = {
   started: false,
-  currency: {
-    code: "EUR",
-    name: "Euros",
-    icon: "/svg/euros.svg",
-  },
+  currencies,
+  selectedCurrency: "EUR",
   theme,
 }
 

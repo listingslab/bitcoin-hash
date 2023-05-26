@@ -2,8 +2,8 @@ import {ThemeShape} from "../types"
 
 export const theme: ThemeShape = {
   title: "Gold",
-  primaryColor: "#C09F52",
+  mode: "light", 
+  primaryColor: "#87703B",
   secondaryColor: "#C09F52",
-  font: "gotham",
-  mode: "light",  
+  font: "quicksand",  
 }

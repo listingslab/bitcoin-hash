@@ -11,6 +11,7 @@ import {
   Tooltip,
 } from "@mui/material"
 import {
+  AppShell,
   Font,
   MuiTheme,
   WrapRedux,
@@ -21,46 +22,25 @@ console.log(pJSON.name, pJSON.version)
 
 export default function BitcoinHash() {
   const output: any = null
-  const title: string = "Bitcoin Hash"
-  const avatar: string = "/svg/logo.svg"
-
   return (<>
             <WrapRedux>
               <MuiTheme>
                 <Container maxWidth="lg" sx={{my:1}}>
-                  <Grid container>
-                    <Grid item xs={12}>
-                      <Box>
-                        <CardHeader 
-                          avatar={<Tooltip title="Restart"><IconButton
-                                    onClick={(e: React.MouseEvent) => {
-                                      e.preventDefault()
-                                      window.open(`/`, "_self")
-                                  }}>
-                                    <Avatar src={avatar} alt={title}/>
-                                  </IconButton></Tooltip>}
-                          title={<Font variant="description">
-                                  {title}
-                                </Font>}      
-                        />
-                          <Grid container>
-
-                            <Grid item xs={12} sm={6}>
-                              <Box sx={{}}>
-                                <Addresses />
-                              </Box>
-                            </Grid>
-
-                            <Grid item xs={12} sm={6}>
-                              <Box sx={{}}>
-                                <Transactions />
-                              </Box>
-                            </Grid>
-
-                          </Grid>                        
-                        </Box>
-                    </Grid>
-                  </Grid>
+                  <CardHeader 
+                    title={<Font variant="description">
+                              Bitcoin Hash
+                            </Font>} 
+                    avatar={<Tooltip title="Reset">
+                              <IconButton
+                                onClick={(e: React.MouseEvent) => {
+                                  e.preventDefault()
+                                  window.open(`/`, "_self")
+                              }}>
+                                <Avatar src="/svg/logo.svg" alt={"Bitcoin Hash"}/>
+                              </IconButton>
+                            </Tooltip>}
+                  />
+                  <AppShell />
                 </Container>
                 {output ? <pre>{JSON.stringify(output, null, 2)}</pre> : null}
               </MuiTheme>

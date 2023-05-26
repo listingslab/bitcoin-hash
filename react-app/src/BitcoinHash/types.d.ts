@@ -4,7 +4,8 @@ export type PwaReduxShape = {
   started: boolean
   persisted?: boolean
   theme: ThemeShape
-  currency: CurrencyShape
+  selectedCurrency: string
+  currencies: Array<CurrencyShape>
 }
 
 export type QueryShape = {
