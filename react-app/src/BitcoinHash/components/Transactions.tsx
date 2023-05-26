@@ -3,13 +3,13 @@ import {
   Box,
 } from "@mui/material"
 import {
-  usePwaSelect,
-  selectPWA,
+  // usePwaSelect,
+  // selectPWA,
   Search,
 } from "../"
 
 export default function Transactions() {
-  const pwa = usePwaSelect(selectPWA)
+  // const pwa = usePwaSelect(selectPWA)
   return (<>
             <Box>
               <Search 

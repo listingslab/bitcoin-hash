@@ -6,9 +6,7 @@ import {
   IconButton,
   Box,
   CardHeader,
-  CardContent,
   Container,
-  CardMedia,
   Grid,
   Tooltip,
 } from "@mui/material"

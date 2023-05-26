@@ -4,13 +4,13 @@ import {
   CardContent,
 } from "@mui/material"
 import {
-  usePwaSelect,
-  selectPWA,
+  // usePwaSelect,
+  // selectPWA,
   Font,
 } from ".."
 
 export default function Transaction() {
-  const pwa = usePwaSelect(selectPWA)
+  // const pwa = usePwaSelect(selectPWA)
   return (<>
           <Card>
             <CardContent>

@@ -3,6 +3,6 @@
     "test": "clear && cd react-app && npm test",
     "start": "clear && cd react-app && npm start",
     "build": "clear && cd react-app && npm run build",
-    "deploy": "clear && firebase deploy"
+    "deploy": "clear && cd react-app && npm run build && firebase deploy"
   }
 }

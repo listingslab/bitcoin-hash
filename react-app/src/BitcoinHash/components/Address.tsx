@@ -5,13 +5,13 @@ import {
   CardContent,
 } from "@mui/material"
 import {
-  usePwaSelect,
-  selectPWA,
+  // usePwaSelect,
+  // selectPWA,
   Font,
 } from ".."
 
 export default function Address() {
-  const pwa = usePwaSelect(selectPWA)
+  // const pwa = usePwaSelect(selectPWA)
   return (<>
           <Box>
             <CardContent>
