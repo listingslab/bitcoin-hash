@@ -3,11 +3,13 @@
 
 Thinking first about the delivery of the project, requirements are a github repo with CI workflow and a live, publicly accessible demo
 
-- [Repo](https://github.com/listingslab/bitcoin-hash)
-- [Demo](https://bitcoin-hash-demo.web.app)
-
+- GitHub
+    - [Repo](https://github.com/listingslab/bitcoin-hash)
+- [Firebase Demo](https://bitcoin-hash-demo.web.app)
 
 #### React App
+
+`npx create-react-app react-app --template redux-typescript`
 
 First I make sure that whatever code I write from this point is modular enough to pick up and place in any other JS app. I’ll do that by creating a folder called /src/BitcoinHash in which all code lives. The idea is that so long as the required dependencies exist in the main project, the Bitcoin Hash model/app/whatever should work anywhere. Like Storybook.
 
