@@ -1,25 +1,21 @@
 import React from "react"
 import {
-  Box,
-  // Card,
-  // CardContent,
-  // CardHeader,
+  Card,
+  CardContent,
 } from "@mui/material"
 import {
-  // usePwaSelect,
-  // selectPWA,
-  // Font,
-  // Address,
   Search,
 } from ".."
 
 export default function Addresses() {
   // const pwa = usePwaSelect(selectPWA)
   return (<>
-          <Box>
-            <Search 
-              type="addresses"
-            />
-          </Box>
+          <Card sx={{}}>
+            <CardContent>
+              <Search 
+                type="addresses"
+              />
+            </CardContent>
+          </Card>
         </>)
 }

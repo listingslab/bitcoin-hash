@@ -4,7 +4,8 @@ import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import BitcoinHash from './BitcoinHash';
 
-test('Sun Rise', () => {
+test('Sun rises?', () => {
+  console.log("Does the sun always rise? yes.")
   const theSunAlwaysRises = true
   expect(theSunAlwaysRises);
 });

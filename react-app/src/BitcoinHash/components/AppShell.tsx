@@ -4,10 +4,9 @@ import {
   Avatar,
   Card,
   CardHeader,
-  CardContent,
   CardActions,
-  Tooltip,
   IconButton,
+  Grid,
 } from "@mui/material"
 import {
   usePwaSelect,
@@ -17,6 +16,10 @@ import {
   Font,
   Icon,
   CurrencyMenu,
+  Addresses,
+  Transactions,
+  Subscribed,
+  TopFive,
 } from "../"
 
 export default function AppShell() {
@@ -29,39 +32,47 @@ export default function AppShell() {
       // @ts-ignore
       dispatch(startApp())
     }
-  }, [pwa])
+  }, [pwa, dispatch])
 
   return (<>
             <Card>
-
               <CardHeader 
-                avatar={<Tooltip title="Reset">
-                          <IconButton
+                avatar={<IconButton
                             onClick={(e: React.MouseEvent) => {
                               e.preventDefault()
                               window.open(`/`, "_self")
                           }}>
                             <Avatar src="/svg/logo.svg" alt={"Bitcoin Hash"}/>
-                          </IconButton>
-                        </Tooltip>}
-                title={<Font variant="description">
+                          </IconButton>}
+                title={<Font variant="title">
                         Bitcoin Hash
                       </Font>}
+                subheader={<Font>
+                      Search for/Subscribe to BTC blockchain hashes
+                    </Font>}
                 action={<>
                   <CurrencyMenu />
                 </>} 
               />
-              <CardContent>
-                <Font>
-                  AppShell
-                </Font>
-                
+
+            </Card>
+
                 {output ? <pre>{JSON.stringify(output, null, 2)}</pre> : null}
-              </CardContent>
+                <Grid container spacing={0}>
+                  <Grid item xs={12} sm={4}>
+                    <Subscribed />
+                    <TopFive />
+                  </Grid>
+                  <Grid item xs={12} sm={8}>
+                    <Addresses />
+                    <Transactions />
+                  </Grid>
+                </Grid>
+          
+              
               <CardActions>
                   <Box sx={{flexGrow:1}} />
                   <IconButton
-                    color="primary"
                     onClick={(e: React.MouseEvent) => {
                       e.preventDefault()
                       window.open(`https://github.com/listingslab/bitcoin-hash`, "_blank")
@@ -69,7 +80,5 @@ export default function AppShell() {
                     <Icon icon="github" />
                   </IconButton>
               </CardActions>
-                
-            </Card>
           </>)
 }

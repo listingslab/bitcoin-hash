@@ -1,5 +1,5 @@
 import React from "react"
-import {ThemeShape} from "../types"
+// import {ThemeShape} from "../types"
 import {
   usePwaSelect,
   selectPWA,

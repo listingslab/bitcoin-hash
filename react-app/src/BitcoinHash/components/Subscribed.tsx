@@ -1,22 +1,22 @@
 import React from "react"
 import {
-  CardContent,
   Card,
+  CardContent,
 } from "@mui/material"
 import {
   // usePwaSelect,
   // selectPWA,
-  Search,
+  Font,
 } from "../"
 
-export default function Transactions() {
+export default function Subscribed() {
   // const pwa = usePwaSelect(selectPWA)
   return (<>
-            <Card sx={{}}>
+            <Card>
               <CardContent>
-                <Search 
-                  type="transactions"
-                />
+                <Font variant="title">
+                  Subscribed
+                </Font>
               </CardContent>
             </Card>
           </>)
