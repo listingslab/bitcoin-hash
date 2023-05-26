@@ -1,4 +1,4 @@
-name: 看看这里 👉
+name: Bitcoin Hash Continuous integration 👉
 
 on: [pull_request]
 
@@ -7,14 +7,14 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    name: 👌 Listingslab AI Test
+    name: 👌 Listingslab AI
     runs-on: ubuntu-latest
 
     steps:
-      - name: 🦹‍♀️ Checkout
+      - name: 👉 Checkout Repo
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
-      - name: 👼 React jest suite
+      - name: 👌 Build and run React jest suite
         run: cd react-app && npm install && npm test
