@@ -8,6 +8,7 @@ import Transactions from "./components/Transactions"
 import Search from "./components/Search"
 import Address from "./components/Address"
 import Transaction from "./components/Transaction"
+import CurrencyMenu from "./components/CurrencyMenu"
 // Theme
 import MuiTheme from "./theme/MuiTheme"
 import {makeTheme} from "./theme/makeTheme"
@@ -40,6 +41,7 @@ export {
   makeTheme,
   Search,
   Transaction,
+  CurrencyMenu,
   Address,
   Transactions,
   Addresses,
