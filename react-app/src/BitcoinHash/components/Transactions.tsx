@@ -5,13 +5,14 @@ import {
   Card,
 } from "@mui/material"
 import {
-  // usePwaSelect,
-  // selectPWA,
+  usePwaSelect,
+  selectPWA,
   Search,
 } from "../"
 
 export default function Transactions() {
-  // const pwa = usePwaSelect(selectPWA)
+  const pwa = usePwaSelect(selectPWA)
+  const {transactions} = pwa
   return (<>
             <Box sx={{m:1}}>
               <Card sx={{}}>
@@ -20,6 +21,7 @@ export default function Transactions() {
                     type="transactions"
                   />
                 </CardContent>
+                <pre>{JSON.stringify(transactions, null, 2)}</pre>
               </Card>
             </Box>
           </>)

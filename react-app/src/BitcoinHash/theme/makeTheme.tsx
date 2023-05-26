@@ -15,8 +15,8 @@ export function makeTheme(
         main: secondary,
       },
       background: {
-        default: primary,
-        paper: lighten(primary, 0.8),
+        // default: primary,
+        // paper: lighten(primary, 0.8),
       }
     },
   }

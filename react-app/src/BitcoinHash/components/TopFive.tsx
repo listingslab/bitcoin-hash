@@ -6,10 +6,13 @@ import {
 } from "@mui/material"
 import {
   Font,
+  usePwaSelect,
+  selectPWA,
 } from "../"
 
 export default function TopFive() {
-  // const pwa = usePwaSelect(selectPWA)
+  const pwa = usePwaSelect(selectPWA)
+  const {topfive} = pwa
   return (<>
             <Box sx={{m:1}}>
               <Card sx={{}}>
@@ -21,6 +24,7 @@ export default function TopFive() {
                               Addresses & Transactions
                             </Font>}
                 />
+                <pre>{JSON.stringify(topfive, null, 2)}</pre>
               </Card>
             </Box>
           </>)

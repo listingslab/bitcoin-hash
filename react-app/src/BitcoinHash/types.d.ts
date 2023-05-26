@@ -1,11 +1,31 @@
 import { PaletteMode } from "@mui/material"
 
+export type AddressShape = {
+  thing: string
+}
+
+export type TransactionShape = {
+  thing: string
+}
+
+export type TopfiveShape = {
+  thing: string
+}
+
+export type SubscribedShape = {
+  thing: string
+}
+
 export type PwaReduxShape = {
   started: boolean
   persisted?: boolean
   theme: ThemeShape
   selectedCurrency: string
   currencies: Array<CurrencyShape>
+  addresses: Array<AddressShape>
+  transactions: Array<TransactionShape>
+  subscribed: Array<SubscribedShape>
+  topfive: Array<TopfiveShape>
 }
 
 export type QueryShape = {

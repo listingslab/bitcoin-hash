@@ -9,11 +9,22 @@ import {
   currencies,
 } from "../"
 
+import {
+  addresses,
+  transactions,
+  subscribed,
+  topfive,
+} from "../mockData"
+
 const initialState: PwaReduxShape = {
   started: false,
   currencies,
   selectedCurrency: "EUR",
   theme,
+  addresses,
+  transactions,
+  subscribed,
+  topfive,
 }
 
 export const pwaSlice = createSlice({

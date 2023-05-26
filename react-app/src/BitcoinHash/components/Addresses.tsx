@@ -6,10 +6,13 @@ import {
 } from "@mui/material"
 import {
   Search,
+  usePwaSelect,
+  selectPWA,
 } from ".."
 
 export default function Addresses() {
-  // const pwa = usePwaSelect(selectPWA)
+  const pwa = usePwaSelect(selectPWA)
+  const {addresses} = pwa
   return (<>
           <Box sx={{m:1}}>
             <Card sx={{}}>
@@ -17,6 +20,7 @@ export default function Addresses() {
                 <Search 
                   type="addresses"
                 />
+                <pre>{JSON.stringify(addresses, null, 2)}</pre>
               </CardContent>
             </Card>
           </Box>
