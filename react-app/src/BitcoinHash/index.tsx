@@ -5,7 +5,11 @@ import {makeTheme} from "./theme/makeTheme"
 import MuiTheme from "./theme/MuiTheme"
 import Icon from "./components/Icon"
 import {Font} from "./components/Font"
-import LeftColLinks from "./components/LeftColLinks"
+import Addresses from "./components/Addresses"
+import Transactions from "./components/Transactions"
+import Search from "./components/Search"
+import Address from "./components/Address"
+import Transaction from "./components/Transaction"
 import WrapRedux from "./redux/WrapRedux"
 import {theme} from "./redux/theme"
 import {selectPWA, setPwaKey} from "./redux/pwaReducer"
@@ -27,9 +31,13 @@ export {
   usePwaDispatch,
   usePwaSelect,
   makeTheme,
+  Search,
+  Transaction,
+  Address,
+  Transactions,
+  Addresses,
   Icon,
   Font,
-  LeftColLinks,
   selectPWA,
   startApp,
   setLocale,

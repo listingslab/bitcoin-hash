@@ -16,17 +16,15 @@ import {
   Font,
   MuiTheme,
   WrapRedux,
-  LeftColLinks,
+  Addresses,
+  Transactions,
 } from "./"
 console.log(pJSON.name, pJSON.version)
 
 export default function BitcoinHash() {
   const output: any = null
   const title: string = "Bitcoin Hash"
-  const description: string = "Retrieve and display address and transaction information from the BTC blockchain"
-  const body: string|null = null
   const avatar: string = "/svg/logo.svg"
-  const image: string|null = null // "/jpg/opengraph.jpg"
 
   return (<>
             <WrapRedux>
@@ -41,54 +39,32 @@ export default function BitcoinHash() {
                                       e.preventDefault()
                                       window.open(`/`, "_self")
                                   }}>
-                                    <Avatar src={avatar} alt={description}/>
+                                    <Avatar src={avatar} alt={title}/>
                                   </IconButton></Tooltip>}
                           title={<Font variant="description">
                                   {title}
-                                </Font>}
-                          subheader={<Font>
-                                      {description}
-                                    </Font>}          
+                                </Font>}      
                         />
                           <Grid container>
 
-                            <Grid item xs={12} sm={4}>
+                            <Grid item xs={12} sm={6}>
                               <Box sx={{}}>
-                                <LeftColLinks />
+                                <Addresses />
                               </Box>
                             </Grid>
 
-
-                            <Grid item xs={12} sm={8}>
-                              
-                              {output ? <pre>{JSON.stringify(output, null, 2)}</pre> : null}
-
-                              <Grid container>  
-                                {image ? <Grid item xs={12}>
-                                  <CardMedia 
-                                    component={"img"}
-                                    src={image} 
-                                    height={175}
-                                    alt={`${title} ${description}`}
-                                  />
-                                </Grid> : null }
-                                {body ? <>
-                                  <Grid item xs={12}>
-                                    <CardContent>
-                                      <Font>
-                                          {body}
-                                      </Font>
-                                    </CardContent>
-                                  </Grid>
-                                </> : null }
-                              </Grid>
+                            <Grid item xs={12} sm={6}>
+                              <Box sx={{}}>
+                                <Transactions />
+                              </Box>
                             </Grid>
-                            
+
                           </Grid>                        
                         </Box>
                     </Grid>
                   </Grid>
                 </Container>
+                {output ? <pre>{JSON.stringify(output, null, 2)}</pre> : null}
               </MuiTheme>
             </WrapRedux>
           </>)
