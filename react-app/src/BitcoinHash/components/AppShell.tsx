@@ -4,7 +4,6 @@ import {
   Avatar,
   Card,
   CardHeader,
-  CardActions,
   IconButton,
   Grid,
 } from "@mui/material"
@@ -23,7 +22,7 @@ import {
 } from "../"
 
 export default function AppShell() {
-  const output: any = null
+  
   const pwa = usePwaSelect(selectPWA)
   const dispatch = usePwaDispatch()
   React.useEffect(() => {
@@ -35,30 +34,32 @@ export default function AppShell() {
   }, [pwa, dispatch])
 
   return (<>
-            <Card>
-              <CardHeader 
-                avatar={<IconButton
-                            onClick={(e: React.MouseEvent) => {
-                              e.preventDefault()
-                              window.open(`/`, "_self")
-                          }}>
-                            <Avatar src="/svg/logo.svg" alt={"Bitcoin Hash"}/>
-                          </IconButton>}
-                title={<Font variant="title">
-                        Bitcoin Hash
+            <Box sx={{m:1}}>
+              <Card>
+                <CardHeader 
+                  avatar={<IconButton
+                              onClick={(e: React.MouseEvent) => {
+                                e.preventDefault()
+                                window.open(`/`, "_self")
+                            }}>
+                              <Avatar src="/svg/logo.svg" alt={"Bitcoin Hash"}/>
+                            </IconButton>}
+                  title={<Font variant="title">
+                          Bitcoin Hash
+                        </Font>}
+                  subheader={<Font>
+                        Search for/Subscribe to BTC blockchain hashes
                       </Font>}
-                subheader={<Font>
-                      Search for/Subscribe to BTC blockchain hashes
-                    </Font>}
-                action={<>
-                  <CurrencyMenu />
-                </>} 
-              />
-
-            </Card>
-
-                {output ? <pre>{JSON.stringify(output, null, 2)}</pre> : null}
-                <Grid container spacing={0}>
+                  action={<>
+                    <CurrencyMenu />
+                  </>} 
+                />
+              </Card>
+            </Box>
+                
+                
+                
+                <Grid container sx={{mt:-1}}>
                   <Grid item xs={12} sm={4}>
                     <Subscribed />
                     <TopFive />
@@ -70,7 +71,7 @@ export default function AppShell() {
                 </Grid>
           
               
-              <CardActions>
+              <Box sx={{display:"flex"}}>
                   <Box sx={{flexGrow:1}} />
                   <IconButton
                     onClick={(e: React.MouseEvent) => {
@@ -79,6 +80,13 @@ export default function AppShell() {
                   }}>
                     <Icon icon="github" />
                   </IconButton>
-              </CardActions>
+                  <Box sx={{flexGrow:1}} />
+              </Box>
+
           </>)
 }
+
+/*
+const output: any = null
+{output ? <pre>{JSON.stringify(output, null, 2)}</pre> : null}
+*/

@@ -1,5 +1,6 @@
 import React from "react"
 import {
+  Box,
   Card,
   CardContent,
 } from "@mui/material"
@@ -12,12 +13,14 @@ import {
 export default function Subscribed() {
   // const pwa = usePwaSelect(selectPWA)
   return (<>
-            <Card>
-              <CardContent>
-                <Font variant="title">
-                  Subscribed
-                </Font>
-              </CardContent>
-            </Card>
+            <Box sx={{m:1}}>
+              <Card>
+                <CardContent>
+                  <Font variant="title">
+                    Subscribed
+                  </Font>
+                </CardContent>
+              </Card>
+            </Box>
           </>)
 }

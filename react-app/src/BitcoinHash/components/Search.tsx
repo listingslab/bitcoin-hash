@@ -9,6 +9,7 @@ import {
 
 const SearchBox = styled('div')(({ theme }) => ({
   position: 'relative',
+  color: theme.palette.secondary.main,
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.primary.main, 0.15),
   '&:hover': {

@@ -1,5 +1,6 @@
 import React from "react"
 import {
+  Box,
   Card,
   CardHeader,
 } from "@mui/material"
@@ -10,15 +11,17 @@ import {
 export default function TopFive() {
   // const pwa = usePwaSelect(selectPWA)
   return (<>
-            <Card sx={{}}>
-              <CardHeader 
-                title={<Font variant="title">
-                        Top 5
-                      </Font>}
-                subheader={<Font>
-                            Searches for Addresses & Transactions
-                          </Font>}
-              />
-            </Card>
+            <Box sx={{m:1}}>
+              <Card sx={{}}>
+                <CardHeader 
+                  title={<Font variant="title">
+                          Top 5 Searches
+                        </Font>}
+                  subheader={<Font>
+                              Addresses & Transactions
+                            </Font>}
+                />
+              </Card>
+            </Box>
           </>)
 }
