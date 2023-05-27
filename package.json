@@ -1,6 +1,6 @@
 {
   "name": "bitcoin-hash",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "scripts": {
     "dev": "npm start",
     "test": "clear && cd react-app && npm test",
