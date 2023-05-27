@@ -1,6 +1,5 @@
 {
   "name": "bitcoin-hash",
-  "version": "1.0.6",
   "dependencies": {
     "@apollo/client": "^3.7.14",
     "@emotion/react": "^11.11.0",
