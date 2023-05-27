@@ -19,7 +19,7 @@ import {
   Transactions,
   Subscribed,
   TopFive,
-  TopSearches,
+  LatestBlocks,
 } from "../"
 
 export default function AppShell() {
@@ -70,8 +70,8 @@ export default function AppShell() {
             </Box>
                 
             <Grid container sx={{mt:-1}}>
-              <Grid item xs={12} sm={4}>
-                <TopSearches />
+              <Grid item xs={12} sm={12}>
+                <LatestBlocks />
                 <Subscribed />
                 <TopFive />
               </Grid>

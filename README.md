@@ -1,4 +1,4 @@
-## ![alt text](./react-app/public/svg/logo16.svg "Bitcoin Hash Logo") Bitcoin Hash
+## ![alt text](./react-app/public/svg/logo16.svg "Bitcoin Hash Logo")  Bitcoin Hash
 
 Bootstrapping from recent work, everything needed to build an app quickly is already written.  
 Even the [Documentation](./react-app/public/markdown/)
@@ -30,7 +30,7 @@ npm start
 - [Tests](./react-app/public/markdown/05_tests.md)  
     CI, Jest, GitHub Workflows, TDD. 
 
-- Highly Portable  
+- [Highly Portable](https://github.com/listingslab/bitcoin-hash/blob/master/react-app/public/markdown/10_init-project.md)  
     Copy the folder [/src/BitcoinHash/](https://github.com/listingslab/bitcoin-hash/tree/master/react-app/src/BitcoinHash) into any JS app and it _should just work_. (If all the dependencies exist)
 
 - [Custom Design System](./react-app/public/markdown/30_design-system.md)       
