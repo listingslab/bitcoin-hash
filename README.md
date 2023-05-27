@@ -10,7 +10,7 @@
 - Highly Portable
     Copy the folder [/src/BitcoinHash/](https://github.com/listingslab/bitcoin-hash/tree/master/react-app/src/BitcoinHash) into any JS app and it _should just work_. (If all the dependencies exist)
 
-- Material UI Design System with listingslab custom components      
+- [Design System](./react-app/public/markdown/30_design-system.md) Material UI with listingslab custom components      
     Based on several years of constant iteration, the project is bootstrapped with all the features we need in easy to use patterns. Example: [&lt;Icon icon="rocket" /&gt;](https://github.com/listingslab/bitcoin-hash/blob/master/react-app/src/BitcoinHash/components/Icon.tsx)
 
 - Persisted Redux store  

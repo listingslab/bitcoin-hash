@@ -19,4 +19,5 @@ Start with loading the Design system and some other components that will let us 
 This is a fully qualified Progressive Web App. It has a service worker and and a manifest meaning it can be installed on chrome by clicking the install button in the address bar. Android phones will offer the install option automatically, but iPhone users have to ‘Add to homescreen’
 
 
-![alt text](../png/pwa-install-2.png "PWA")
+![alt text](../png/pwa-install-2.png "PWA
+")
