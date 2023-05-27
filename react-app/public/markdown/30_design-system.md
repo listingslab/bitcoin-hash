@@ -11,6 +11,11 @@ Start with loading the Design system and some other components that will let us 
 - Icon component
 - Font component
 
+
+## Theme
+
+- [See the code](https://github.com/listingslab/bitcoin-hash/tree/master/react-app/src/BitcoinHash/theme)
+
 ## Responsiveness
 
 Responsiveness is important and should be defined and implements from the start. It might seem overkill to add responsiveness to a prototype, but it IS that important and needs to be there from the start
