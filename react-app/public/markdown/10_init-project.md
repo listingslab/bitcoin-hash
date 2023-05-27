@@ -1,5 +1,4 @@
-#### Step 1 
-## Initialise project
+## ![alt text](../svg/logo16.svg "Bitcoin Hash Logo") Initialise project
 
 Thinking first about the delivery of the project, requirements are a github repo with CI workflow and a live, publicly accessible demo
 

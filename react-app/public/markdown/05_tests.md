@@ -1,4 +1,4 @@
-## Tests
+## ![alt text](../svg/logo16.svg "Bitcoin Hash Logo") Tests
 
 CI, Jest, GitHub Workflows, TDD.
 

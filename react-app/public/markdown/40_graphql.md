@@ -1,4 +1,4 @@
-#### Step 4
+#### ![alt text](../svg/logo16.svg "Bitcoin Hash Logo") Bitquery GraphQL
 
 > As a developer I need to find a free API service to develop a prototype react app which retrieves and renders address and transaction information from the BTC blockchain. Ideally the service would include GraphQL and WebSockets
 

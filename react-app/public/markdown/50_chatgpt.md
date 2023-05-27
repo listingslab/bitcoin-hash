@@ -1,4 +1,4 @@
-## ChatGPT
+## ![alt text](../svg/logo16.svg "Bitcoin Hash Logo") ChatGPT
 
 What do we use AI Chat GTP for? In tech, language is important. If we are precise with words we use, ambiguity and misunderstandings can be minimised. In this case I need to verify my understanding of the terms ‘hash’ and ‘address’ in the context of blockchain software. This is where we can make use of AI by asking Chat GTP the following:
 
