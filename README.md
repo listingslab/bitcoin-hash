@@ -2,6 +2,14 @@
 
 Bootstrapping from recent work, everything needed to build an app quickly is already written. Even the [Documentation](./react-app/public/markdown/)
 
+#### Install & run
+
+To connect to Bitquery requires an API key, which can't be exposed in a public repo and is therefore abstracted to an `.env`. Unzipping the `/env.zip` is a cheaty way around that
+
+```shell
+# REACT_APP_BITQUERY_API_KEY=""
+```
+
 #### Features
 
 - Tests  

@@ -15,6 +15,7 @@ import {
   WrapRedux,
 } from "./"
 console.log(pJSON.name, pJSON.version)
+// console.log("REACT_APP_BITQUERY_API_KEY", process.env.REACT_APP_BITQUERY_API_KEY)
 
 export default function BitcoinHash() {
   

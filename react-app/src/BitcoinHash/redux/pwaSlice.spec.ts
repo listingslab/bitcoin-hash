@@ -8,9 +8,9 @@ test('Sun Rise', () => {
     expect(theSunWillRise);
 });
 
-  describe('SetPWAKey', () => {
+  describe('Select Currency', () => {
     console.log("Should update currency to GDP", {
-      key: "currency", 
+      key: "selectedCurrency", 
       value: "GBP",
     })
 
