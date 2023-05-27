@@ -5,11 +5,10 @@ import { useTheme, Typography } from "@mui/material"
 
 export function Font(props: any) {
   const theme = useTheme()
-  const { variant, fontSize, color, children, align, width, /*overflow*/ } = props
-  
+  const { variant, fontSize, color, children, align, width, /*overflow*/ } = props  
   let textAlign = "left"
   let w: any = "100%"
-  let c = "#333"
+  let c = theme.palette.secondary.main
   if (color) c = color
   if (width) w = width
   let textfontSize: any = "1rem"
@@ -38,8 +37,6 @@ export function Font(props: any) {
     lineHeight = fontSize
     textfontSize = fontSize
   }
-
-
 
   return (
     <Typography
