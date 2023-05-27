@@ -106,6 +106,7 @@ import AuthIcon from "@mui/icons-material/Security"
 import SendIcon from "@mui/icons-material/Send"
 import YouIcon from "@mui/icons-material/AdminPanelSettings"
 import HostIcon from "@mui/icons-material/AppShortcut"
+import SubscribeIcon from "@mui/icons-material/Favorite"
 
 export default function Icon(props: any) {
   let { icon, color } = props
@@ -117,7 +118,12 @@ export default function Icon(props: any) {
       iconFragment = <HostIcon color={color} />
       break
 
-    case "app":
+      case "subscribe":
+        iconFragment = <SubscribeIcon color={color} />
+        break
+
+
+      case "app":
       iconFragment = <HostIcon color={color} />
       break
 
