@@ -4,11 +4,11 @@
 
 #### Features
 
-- Tests 
+- Tests  
     CI, Jest, GitHub Workflows, TDD. [Read more](./react-app/public/markdown/05_tests.md)
 
-- Portable architecture  
-    If the deps exist, you can copy the folder [/src/BitcoinHash/](https://github.com/listingslab/bitcoin-hash/tree/master/react-app/src/BitcoinHash) into any JS app and it _should just work_
+- Highly Portable
+    Copy the folder [/src/BitcoinHash/](https://github.com/listingslab/bitcoin-hash/tree/master/react-app/src/BitcoinHash) into any JS app and it _should just work_. (If all the dependencies exist)
 
 - Material UI Design System with listingslab custom components      
     Based on several years of constant iteration, the project is bootstrapped with all the features we need in easy to use patterns. Example: [&lt;Icon icon="rocket" /&gt;](https://github.com/listingslab/bitcoin-hash/blob/master/react-app/src/BitcoinHash/components/Icon.tsx)
