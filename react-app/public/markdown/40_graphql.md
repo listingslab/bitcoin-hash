@@ -1,8 +1,18 @@
-#### ![alt text](../svg/logo16.svg "Bitcoin Hash Logo") Bitquery GraphQL
+## ![alt text](../svg/logo16.svg "Bitcoin Hash Logo") Bitquery GraphQL & Apollo
 
-> As a developer I need to find a free API service to develop a prototype react app which retrieves and renders address and transaction information from the BTC blockchain. Ideally the service would include GraphQL and WebSockets
+> As a developer I need to easily integrate a React app with a free API service to develop a prototype which retrieves and renders address and transaction data from the BTC blockchain
 
-![alt text](../png/bitquery-signup.png "bitquery")
+- [Why GraphQL is better for blockchain data APIs](https://bitquery.io/blog/blockchain-graphql)
+
+
+#### Apollo GraphQL 
+
+We need a front end library to deal with GraphQL in React. That library is @apollo
+
+- https://www.npmjs.com/package/@apollo/client
+- https://www.apollographql.com/docs/react/get-started/
+- https://www.apollographql.com/docs/react/data/queries/
+
 
 ## GraphQL Bitquery API
 
@@ -13,7 +23,7 @@
 
 - [bitquery](https://bitquery.io/about)
 - [GraphQL Playground](https://ide.bitquery.io)
-- [Why GraphQL is better for blockchain data APIs](https://bitquery.io/blog/blockchain-graphql)
+
 - [GraphQL on Bitquery](https://bitquery.io/labs/graphql)
 - [Create your first Blockchain GraphQL query](https://bitquery.io/blog/blockchain-graphql-query)
 
@@ -33,12 +43,4 @@ GraphQL is an open-source data query and manipulation language for APIs, and a r
 - Support for smart contracts and token, DApps, DEX and DeFi applications data
 - Supports smart contracts and token implementations, including NFTs on Ethereum, Tron, EOS etc
 
-
-
-#### Apollo GraphQL 
-
-We need a front end library to deal with GraphQL in React. That library is @apollo
-
-- https://www.npmjs.com/package/@apollo/client
-- https://www.apollographql.com/docs/react/get-started/
-- https://www.apollographql.com/docs/react/data/queries/
+![alt text](../png/bitquery-signup.png "bitquery")
