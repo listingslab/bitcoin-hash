@@ -1,4 +1,4 @@
-## ![alt text](../svg/logo16.svg "Bitcoin Hash Logo") Bitquery GraphQL & Apollo
+## ![alt text](../svg/logo16.svg "Bitcoin Hash Logo")  Bitquery with GraphQL & Apollo
 
 > As a developer I need to easily integrate a React app with a free API service to develop a prototype which retrieves and renders address and transaction data from the BTC blockchain
 
