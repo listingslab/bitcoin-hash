@@ -19,7 +19,7 @@ Bootstrapping from recent work, everything needed to build an app quickly is alr
 - [Tests](./react-app/public/markdown/05_tests.md)  
     CI, Jest, GitHub Workflows, TDD. 
 
-- Highly Portable
+- Highly Portable  
     Copy the folder [/src/BitcoinHash/](https://github.com/listingslab/bitcoin-hash/tree/master/react-app/src/BitcoinHash) into any JS app and it _should just work_. (If all the dependencies exist)
 
 - [Custom Design System](./react-app/public/markdown/30_design-system.md)       
