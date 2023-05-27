@@ -11,6 +11,7 @@
     Based on several years of constant iteration, the project is bootstrapped with all the features we need in easy to use patterns. Example: [&lt;Icon icon="rocket" /&gt;](https://github.com/listingslab/bitcoin-hash/blob/master/react-app/src/BitcoinHash/components/Icon.tsx)
 
 - Persisted Redux store  
-    Instead of saving anything to a DB, we're using a [persisted Redux store with LocalStorage](https://github.com/listingslab/bitcoin-hash/blob/master/react-app/src/BitcoinHash/redux/store.ts). This means a returning visit does not require a DB request and even better, the entire redux state is saved. As a next step I would probably also save the redux state to a cloud based NoSQL DB
+    Instead of saving anything to a DB, we're using a [persisted Redux store with LocalStorage](https://github.com/listingslab/bitcoin-hash/blob/master/react-app/src/BitcoinHash/redux/store.ts). This means a returning visit does not require a DB request and even better; the entire app state is saved. As a next step I would also save the redux state to a cloud based NoSQL DB at certain times for good measure
 
-    https://github.com/listingslab/bitcoin-hash/blob/master/react-app/src/BitcoinHash/redux/store.ts
+- GraphQL  
+    Combining [Bitquery's GraphQL API](https://bitquery.io/labs/graphql) service with [@apollo/client](https://www.npmjs.com/package/@apollo/client) in React, we developed an async data layer interface which is used via [redux actions](https://github.com/listingslab/bitcoin-hash/tree/master/react-app/src/BitcoinHash/redux/actions)
