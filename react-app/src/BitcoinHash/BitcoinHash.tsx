@@ -2,6 +2,11 @@ import React from "react"
 import pJSON from "../../package.json"
 import "./theme/default.css"
 import {
+  ApolloClient, 
+  InMemoryCache, 
+  ApolloProvider,
+} from "@apollo/client"
+import {
   Container,
 } from "@mui/material"
 import {
@@ -13,14 +18,21 @@ console.log(pJSON.name, pJSON.version)
 
 export default function BitcoinHash() {
   
+  const client = new ApolloClient({
+    uri: "https://graphql.bitquery.io/",
+    cache: new InMemoryCache(),
+  })
+
   return (<>
-            <WrapRedux>
-              <MuiTheme>
-                <Container maxWidth="md">
-                  <AppShell />
-                </Container>
-              </MuiTheme>
-            </WrapRedux>
+            <ApolloProvider client={client}>
+              <WrapRedux>
+                <MuiTheme>
+                  <Container maxWidth="md">
+                    <AppShell />
+                  </Container>
+                </MuiTheme>
+              </WrapRedux>
+            </ApolloProvider>
           </>)
 }
 

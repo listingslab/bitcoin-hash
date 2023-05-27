@@ -11,6 +11,7 @@ import Transaction from "./components/Transaction"
 import CurrencyMenu from "./components/CurrencyMenu"
 import Subscribed from "./components/Subscribed"
 import TopFive from "./components/TopFive"
+import TopSearches from "./components/TopSearches"
 // Theme
 import MuiTheme from "./theme/MuiTheme"
 import {makeTheme} from "./theme/makeTheme"
@@ -44,6 +45,7 @@ export {
   Search,
   Transaction,
   TopFive,
+  TopSearches,
   CurrencyMenu,
   Subscribed,
   Address,

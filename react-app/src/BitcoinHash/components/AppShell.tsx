@@ -19,6 +19,7 @@ import {
   Transactions,
   Subscribed,
   TopFive,
+  TopSearches,
 } from "../"
 
 export default function AppShell() {
@@ -70,6 +71,7 @@ export default function AppShell() {
                 
             <Grid container sx={{mt:-1}}>
               <Grid item xs={12} sm={4}>
+                <TopSearches />
                 <Subscribed />
                 <TopFive />
               </Grid>
