@@ -4,8 +4,7 @@
 
 #### Introduction
 
-Hi, thank you for taking on our challenge! We hope that you'll learn a lot, 
-create an awesome project and join our team!
+Hi, thank you for taking on our challenge! We hope that you'll learn a lot, create an awesome project and join our team!
 
 In this test we will evaluate your technical skills, namely, code structure, code quality, naming conventions, knowledge of commonly used frameworks, and overall problem-solving skills. 
 
