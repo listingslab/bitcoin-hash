@@ -1,6 +1,6 @@
 ## ![alt text](./react-app/public/svg/logo16.svg "Bitcoin Hash Logo") Bitcoin Hash
 
-Bootstrapping from my recent work, everything I need to build an app quickly is already written. Even the [Documentation](./react-app/public/markdown/)
+Bootstrapping from recent work, everything needed to build an app quickly is already written. Even the [Documentation](./react-app/public/markdown/)
 
 #### Features
 
