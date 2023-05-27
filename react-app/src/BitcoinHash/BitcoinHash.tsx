@@ -1,5 +1,5 @@
 import React from "react"
-import pJSON from "../../package.json"
+// import pJSON from "../../package.json"
 import "./theme/default.css"
 import {
   ApolloClient, 
