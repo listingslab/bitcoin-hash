@@ -16,8 +16,8 @@ Bootstrapping from recent work, everything needed to build an app quickly is alr
 
 #### Features
 
-- Tests  
-    CI, Jest, GitHub Workflows, TDD. [Read more](./react-app/public/markdown/05_tests.md)
+- [Tests](./react-app/public/markdown/05_tests.md)  
+    CI, Jest, GitHub Workflows, TDD. 
 
 - Highly Portable
     Copy the folder [/src/BitcoinHash/](https://github.com/listingslab/bitcoin-hash/tree/master/react-app/src/BitcoinHash) into any JS app and it _should just work_. (If all the dependencies exist)
