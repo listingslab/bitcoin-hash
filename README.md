@@ -2,6 +2,10 @@
 
 Bootstrapping from recent work, everything needed to build an app quickly is already written. Even the [Documentation](./react-app/public/markdown/)
 
+### [Challenge](./react-app/public/markdown/00_challenge.md) 
+  
+### Solution
+
 #### Install & run
 
 > To connect to Bitquery requires an API key, which can't be exposed in a public repo and is therefore abstracted to an `.env`. Just un-zip `/react-app/env.zip` for a cheaty workaround 
