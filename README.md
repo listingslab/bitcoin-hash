@@ -22,6 +22,9 @@ npm test
 npm start
 ```
 
+
+[Read more](https://github.com/listingslab/bitcoin-hash/blob/master/react-app/public/markdown/10_init-project.md)
+
 #### Features
 
 - [Tests](./react-app/public/markdown/05_tests.md)  
