@@ -1,4 +1,4 @@
-## Code Challenge for Full Stack JavaScript Developers
+## ![alt text](../svg/logo16.svg "Bitcoin Hash Logo")  Code Challenge for Full Stack JavaScript Developers
 
 > Although this is a real world example, references to the company for whom it was done have been removed to privacy reasons
 

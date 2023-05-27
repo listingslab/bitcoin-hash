@@ -1,4 +1,4 @@
-## ![alt text](../svg/logo16.svg "Bitcoin Hash Logo") Design System
+## ![alt text](../svg/logo16.svg "Bitcoin Hash Logo")  Design System
 
 > Demonstrating GitHub protocol, [feature/design-system](https://github.com/listingslab/bitcoin-hash/tree/feature/design-system)  raises a [PR](https://github.com/listingslab/bitcoin-hash/pull/3) to staging 
 

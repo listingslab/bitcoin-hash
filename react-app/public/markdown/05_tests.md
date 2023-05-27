@@ -1,4 +1,4 @@
-## ![alt text](../svg/logo16.svg "Bitcoin Hash Logo") Tests
+## ![alt text](../svg/logo16.svg "Bitcoin Hash Logo")  Tests
 
 #### Pull Request checks
 ![alt text](../png/github-pr-checks.png "TDD")
