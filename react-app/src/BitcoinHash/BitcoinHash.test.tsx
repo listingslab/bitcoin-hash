@@ -10,17 +10,23 @@ test('Sun Rise?', () => {
   expect(theSunAlwaysRises);
 });
 
+test('REACT_APP_BITQUERY_API_KEY?', () => {
+  // console.log("Is Bitquery API Key in .env?")
+  const env = true
+  expect(env);
+});
+
 test('Bitquery', () => {
   console.log("Do we get a sensible response from Bitquery?")
   const bq = true
   expect(bq);
 });
 
-test('Bitquery Subscribe', () => {
-  console.log("Can we subscribe Bitquery data?")
-  const bq = true
-  expect(bq);
-});
+// test('Bitquery Subscribe', () => {
+//   console.log("Can we subscribe Bitquery data?")
+//   const bq = true
+//   expect(bq);
+// });
 
 test('Renders app', () => {
   const { getByText } = render(

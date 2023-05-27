@@ -14,14 +14,18 @@ import {
   MuiTheme,
   WrapRedux,
 } from "./"
-console.log(pJSON.name, pJSON.version)
-// console.log("REACT_APP_BITQUERY_API_KEY", process.env.REACT_APP_BITQUERY_API_KEY)
+// console.log(pJSON.name, pJSON.version)
 
 export default function BitcoinHash() {
   
   const client = new ApolloClient({
     uri: "https://graphql.bitquery.io/",
     cache: new InMemoryCache(),
+    headers: {
+      "Content-Type": "application/json",
+      // @ts-ignore
+      "X-API-KEY": process.env.REACT_APP_BITQUERY_API_KEY,
+    },
   })
 
   return (<>
@@ -37,8 +41,7 @@ export default function BitcoinHash() {
           </>)
 }
 
-
 /*
-const output: any = null
-{output ? <pre>{JSON.stringify(output, null, 2)}</pre> : null}
+  const output: any = null
+  {output ? <pre>{JSON.stringify(output, null, 2)}</pre> : null}
 */
