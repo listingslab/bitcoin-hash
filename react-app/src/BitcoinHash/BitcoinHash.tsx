@@ -1,5 +1,5 @@
-import React from "react"
 // import pJSON from "../../package.json"
+import React from "react"
 import "./theme/default.css"
 import {
   ApolloClient, 
@@ -40,6 +40,7 @@ export default function BitcoinHash() {
             </ApolloProvider>
           </>)
 }
+
 
 /*
   const output: any = null

@@ -11,7 +11,8 @@ import Transaction from "./components/Transaction"
 import CurrencyMenu from "./components/CurrencyMenu"
 import Subscribed from "./components/Subscribed"
 import TopFive from "./components/TopFive"
-import TopSearches from "./components/TopSearches"
+import BitQuery from "./components/BitQuery"
+import LatestBlocks from "./components/LatestBlocks"
 // Theme
 import MuiTheme from "./theme/MuiTheme"
 import {makeTheme} from "./theme/makeTheme"
@@ -43,9 +44,10 @@ export {
   usePwaSelect,
   makeTheme,
   Search,
+  LatestBlocks,
   Transaction,
   TopFive,
-  TopSearches,
+  BitQuery,
   CurrencyMenu,
   Subscribed,
   Address,
