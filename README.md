@@ -4,7 +4,7 @@ Bootstrapping from recent work, everything needed to build an app quickly is alr
 
 #### Install & run
 
-> To connect to Bitquery requires an API key, which can't be exposed in a public repo and is therefore abstracted to an `.env`. Just un-zip `/react-app/env.zip` for a cheaty way around 
+> To connect to Bitquery requires an API key, which can't be exposed in a public repo and is therefore abstracted to an `.env`. Just un-zip `/react-app/env.zip` for a cheaty workaround 
 
 ```shell
 # REACT_APP_BITQUERY_API_KEY=""
