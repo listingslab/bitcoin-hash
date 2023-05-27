@@ -4,6 +4,9 @@
 
 #### Features
 
+- Tests 
+    CI, Jest, GitHub Workflows, TDD. [Read more](./react-app/public/markdown/05_tests.md)
+
 - Portable architecture  
     If the deps exist, you can copy the folder [/src/BitcoinHash/](https://github.com/listingslab/bitcoin-hash/tree/master/react-app/src/BitcoinHash) into any JS app and it _should just work_
 

@@ -38,7 +38,3 @@ GraphQL is an open-source data query and manipulation language for APIs, and a r
 - https://www.npmjs.com/package/@apollo/client
 - https://www.apollographql.com/docs/react/get-started/
 - https://www.apollographql.com/docs/react/data/queries/
-
-
-
-
