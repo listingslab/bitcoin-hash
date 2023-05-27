@@ -1,4 +1,4 @@
-## ![alt text](../svg/logo16.svg "Bitcoin Hash Logo") Design System
+## ![alt text](../svg/logo16.svg "Bitcoin Hash Logo")  Design System
 
 > Demonstrating GitHub protocol, [feature/design-system](https://github.com/listingslab/bitcoin-hash/tree/feature/design-system)  raises a [PR](https://github.com/listingslab/bitcoin-hash/pull/3) to staging 
 
@@ -10,6 +10,11 @@ Start with loading the Design system and some other components that will let us 
 - Custom theme
 - Icon component
 - Font component
+
+
+## Theme
+
+- [See the code](https://github.com/listingslab/bitcoin-hash/tree/master/react-app/src/BitcoinHash/theme)
 
 ## Responsiveness
 

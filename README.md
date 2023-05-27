@@ -1,6 +1,7 @@
 ## ![alt text](./react-app/public/svg/logo16.svg "Bitcoin Hash Logo") Bitcoin Hash
 
-Bootstrapping from recent work, everything needed to build an app quickly is already written. Even the [Documentation](./react-app/public/markdown/)
+Bootstrapping from recent work, everything needed to build an app quickly is already written.  
+Even the [Documentation](./react-app/public/markdown/)
 
 ### [Challenge](./react-app/public/markdown/00_challenge.md) 
   
@@ -11,8 +12,18 @@ Bootstrapping from recent work, everything needed to build an app quickly is alr
 > To connect to Bitquery requires an API key, which can't be exposed in a public repo and is therefore abstracted to an `.env`. Just un-zip `/react-app/env.zip` for a cheaty workaround 
 
 ```shell
-# REACT_APP_BITQUERY_API_KEY=""
+cd <working-dir>
+git clone https://github.com/listingslab/bitcoin-hash
+cd bitcoin-hash
+unzip react-app/env.zip
+npm install
+npm test
+# new tab
+npm start
 ```
+
+
+[Read more](https://github.com/listingslab/bitcoin-hash/blob/master/react-app/public/markdown/10_init-project.md)
 
 #### Features
 

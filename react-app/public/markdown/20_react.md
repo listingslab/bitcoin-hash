@@ -1,4 +1,4 @@
-## ![alt text](../svg/logo16.svg "Bitcoin Hash Logo") React
+## ![alt text](../svg/logo16.svg "Bitcoin Hash Logo")  React
 
 We use a TDD (Test Driven Development) approach to this project. React has Jest built in, so we'll use that. What we’ll do is start the test suite and keep it running during development time. 
 
