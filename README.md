@@ -5,7 +5,7 @@ Even the [Documentation](./react-app/public/markdown/)
 
 ### [Challenge](./react-app/public/markdown/00_challenge.md) 
   
-### Solution
+### [Solution](https://github.com/listingslab/bitcoin-hash/blob/master/react-app/public/markdown/10_init-project.md)
 
 #### Install & run
 
@@ -21,9 +21,6 @@ npm test
 # new tab
 npm start
 ```
-
-
-[Read more](https://github.com/listingslab/bitcoin-hash/blob/master/react-app/public/markdown/10_init-project.md)
 
 #### Features
 

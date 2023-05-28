@@ -12,6 +12,18 @@ import {
   Font,
 } from "../"
 
+const HeaderRow = () => {
+  return <>
+    <Card>
+    HeaderRow
+    </Card>
+  </>
+}
+
+const BlockItem = (block: any) => {
+
+  return <>unixtime</>
+}
 
 const BITQUERY_QUERY = gql`
 query BitcoinHash {
@@ -30,8 +42,9 @@ query BitcoinHash {
 
 export default function LatestBlocks(): JSX.Element {
   const { loading, error, data } = useQuery(BITQUERY_QUERY)
-  if (loading) return <></>
-
+  
+  if (!data) return <></>
+  
   const {blocks} = data.bitcoin
   return (
     <>
@@ -39,29 +52,33 @@ export default function LatestBlocks(): JSX.Element {
         <Card>
           <CardHeader 
             title={<Font variant="title">
-                      Latest Blocks
+                      Latest 20 Blocks
                     </Font>}
           />
           <CardContent>
-            {blocks ? <>
-              <List>
-                {blocks.map((block: any, i: number) => {
-                  // console.log("block", block)
-                  // const {blockHash} = block
-                  return <ListItem key={`block_${i}`}>
-                  <pre>{JSON.stringify(block, null, 2)}</pre>
-                  </ListItem>
-                })}
-              </List>
-            </> : null}
-              
-            {loading ? <><Font>Loading...</Font></> : null}
-            {error ? <pre>Bitquery Error: {JSON.stringify(error, null, 2)}</pre> : null}
+            {loading ? <><Font>Loading...</Font></> : <>
+              {blocks ? <>
+                <List>
+                  <HeaderRow />
+                  {blocks.map((block: any, i: number) => {
+                    // console.log("block", block)
+                    // const {blockHash} = block
+                    if (i===1) console.log("block", block)
+                    return <ListItem key={`block_${i}`}>
+                    {/* <pre>{JSON.stringify(block, null, 2)}</pre> */}
+                    <BlockItem block={block}/>
+                    </ListItem>
+                  })}
+                </List>
+              </> : null}
+              {error ? <pre>Bitquery Error: {JSON.stringify(error, null, 2)}</pre> : null}
+            </>}
           </CardContent>
         </Card>
       </Box>
     </>
   )
+  
 }
 
 /*
