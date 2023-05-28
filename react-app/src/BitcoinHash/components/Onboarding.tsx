@@ -12,6 +12,8 @@ import {
 
 export default function Onboarding() {
   const pwa = usePwaSelect(selectPWA)
+  const {onboarding} = pwa
+  
 
   return (<>
           <Box sx={{my:1}}>

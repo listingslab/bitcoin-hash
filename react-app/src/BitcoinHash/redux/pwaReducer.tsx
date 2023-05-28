@@ -18,6 +18,7 @@ import {
 
 const initialState: PwaReduxShape = {
   started: false,
+  onboarding: true,
   currencies,
   selectedCurrency: "EUR",
   theme,
@@ -25,6 +26,7 @@ const initialState: PwaReduxShape = {
   transactions,
   subscribed,
   topfive,
+  
 }
 
 export const pwaSlice = createSlice({

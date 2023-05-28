@@ -1,4 +1,4 @@
-// import pJSON from "../../package.json"
+import pJSON from "../../package.json"
 import React from "react"
 import "./theme/default.css"
 import {
@@ -14,7 +14,7 @@ import {
   MuiTheme,
   WrapRedux,
 } from "./"
-// console.log(pJSON.name, pJSON.version)
+console.log(pJSON.name, pJSON.version)
 
 export default function BitcoinHash() {
   

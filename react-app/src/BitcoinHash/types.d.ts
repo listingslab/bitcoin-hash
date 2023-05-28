@@ -18,6 +18,7 @@ export type SubscribedShape = {
 
 export type PwaReduxShape = {
   started: boolean
+  onboarding: boolean
   persisted?: boolean
   theme: ThemeShape
   selectedCurrency: string
