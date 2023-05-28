@@ -33,13 +33,17 @@ npm start
 - [Custom Design System](./react-app/public/markdown/30_design-system.md)       
     Based on several years of constant iteration, the project is bootstrapped with Material UI, listingslab custom components containing all the features I need to rapidly create a full PWA. Example: [&lt;Icon icon="rocket" /&gt;](https://github.com/listingslab/bitcoin-hash/blob/master/react-app/src/BitcoinHash/components/Icon.tsx)
 
-primary (darker)
+Primary Colour  
+(darker)
+
 ```shell
-#1F760D
+#2b1616
 ```
-secondary (lighter)
+Secondary Colour  
+(lighter)
+
 ```shell
-#3EDA1F
+#3B3B3B
 ```
 
 - Persistant Data 
