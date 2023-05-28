@@ -5,14 +5,23 @@ import {
   alpha,
   Box,
   Card,
+  CardActions,
+  Button,
   Grid,
   InputBase,
   FormControl,
   RadioGroup,
   FormControlLabel,
+  LinearProgress,
   Radio,
 } from "@mui/material"
 import {
+  usePwaSelect,
+  usePwaDispatch,
+  search,
+  updateSearchMode,
+  updateSearchStr,
+  selectPWA,
   Icon,
 } from "../"
 
@@ -58,49 +67,84 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }))
 
 export default function Search() {  
+  const pwa = usePwaSelect(selectPWA)
+  const dispatch = usePwaDispatch()
+  const {searchMode, searchStr, searching} = pwa
+  // console.log("searching", searching)
+
+  const onUpdateSearchStr = (searchStr: string) => {
+    dispatch (updateSearchStr(searchStr))
+  }
+
+  const onRadioClick = (searchMode: string) => {
+    dispatch (updateSearchMode(searchMode))
+    dispatch (updateSearchStr(""))
+  }
+
+
+  const onSearchClick = () => dispatch (search())
+  
+
   return (<>
             <Box sx={{my:1}}>
-              
               <Card>
+
+                { searching ? <LinearProgress /> : null }
+                
                 <Grid container>
+
+                  <Grid item sx={{flexGrow:1, p:1.75}} >
+                    <SearchBox>
+                      <SearchIconWrapper>
+                        <Icon icon="hash" color="primary" />
+                      </SearchIconWrapper>
+                      <StyledInputBase
+                        placeholder={`Search…`}
+                        value={searchStr}
+                        onChange={(e: any) => onUpdateSearchStr(e.target.value)}
+                      />
+                    </SearchBox>
+                  </Grid>
+
 
                   <Grid item sx={{p:1.5}}>
                     <Box sx={{mx:1}}>
                       <FormControl>
-                        <RadioGroup
-                          row
-                          aria-labelledby="search-group-label"
-                          defaultValue="addresses"
-                          name="search-group"
-                        >
+                        <RadioGroup row value={searchMode}>
+
                           <FormControlLabel 
-                            value="addresses" 
-                            control={<Radio />} 
                             label="Addresses" 
-                          />
-                          <FormControlLabel 
-                            value="transactions" 
+                            value="address" 
+                            onClick={() => onRadioClick("address")}
                             control={<Radio />} 
-                            label="Transactions" 
                           />
+
+                          <FormControlLabel 
+                            label="Transactions"
+                            value="transaction" 
+                            onClick={() => onRadioClick("transaction")}
+                            control={<Radio />}
+                          />
+
                         </RadioGroup>
                       </FormControl>
                     </Box>
                   </Grid>
 
-                  <Grid item sx={{flexGrow:1, p:1.5}} >
-                    <SearchBox>
-                      <SearchIconWrapper>
-                        <Icon icon="search" color="primary" />
-                      </SearchIconWrapper>
-                      <StyledInputBase
-                        placeholder={`Search…`}
-                        inputProps={{ 'aria-label': 'search' }}
-                      />
-                    </SearchBox>
-                  </Grid>
-
                 </Grid>
+
+                {searchStr !== "" && !searching ? <CardActions>
+                  <Button
+                    fullWidth
+                    variant="outlined"
+                    onClick={() => onSearchClick()}>
+                    <Icon icon="search"/>
+                    <span style={{marginLeft:8, marginRight:8}}>
+                    {searchMode} {searchStr}
+                    </span>
+                  </Button>
+                </CardActions> : null }
+                
               </Card>
             </Box>
           </>

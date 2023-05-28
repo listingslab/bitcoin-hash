@@ -28,6 +28,9 @@ import {persistor} from "./redux/store"
 import { startApp } from "./redux/actions/startApp"
 import { setCurrency } from "./redux/actions/setCurrency"
 import { getBitquery } from "./redux/actions/getBitquery"
+import { updateSearchMode } from "./redux/actions/updateSearchMode"
+import { updateSearchStr } from "./redux/actions/updateSearchStr"
+import { search } from "./redux/actions/search"
 
 export {
   BitcoinHash,
@@ -57,4 +60,7 @@ export {
   startApp,
   setCurrency,
   getBitquery,
+  updateSearchMode,
+  updateSearchStr,
+  search,
 }

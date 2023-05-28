@@ -1,5 +1,21 @@
 import { PaletteMode } from "@mui/material"
 
+export type PwaReduxShape = {
+  started: boolean
+  theme: ThemeShape
+  onboarding: boolean
+  searching: boolean
+  searchMode: string
+  searchStr: string|null
+  selectedCurrency: string
+  currencies: Array<CurrencyShape>
+  addresses: Array<AddressShape>
+  transactions: Array<TransactionShape>
+  subscribed: Array<SubscribedShape>
+  topfive: Array<TopfiveShape>
+  persisted?: boolean
+}
+
 export type AddressShape = {
   thing: string
 }
@@ -14,23 +30,6 @@ export type TopfiveShape = {
 
 export type SubscribedShape = {
   thing: string
-}
-
-export type PwaReduxShape = {
-  started: boolean
-  onboarding: boolean
-  persisted?: boolean
-  theme: ThemeShape
-  selectedCurrency: string
-  currencies: Array<CurrencyShape>
-  addresses: Array<AddressShape>
-  transactions: Array<TransactionShape>
-  subscribed: Array<SubscribedShape>
-  topfive: Array<TopfiveShape>
-}
-
-export type QueryShape = {
-  type?: string
 }
 
 export type SearchShape = {

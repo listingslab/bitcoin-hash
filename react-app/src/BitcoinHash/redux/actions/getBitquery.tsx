@@ -1,9 +1,9 @@
 import { AppThunk } from "../store"
 // import { setPwaKey } from "../.."
-import {QueryShape} from "../../types"
+// import {QueryShape} from "../../types"
 
 export const getBitquery =
-  (payload: QueryShape): AppThunk =>
+  (payload: any): AppThunk =>
   async (/*dispatch: any*/) => {
     try {
         console.log("getBitquery", payload)

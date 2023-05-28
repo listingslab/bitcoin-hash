@@ -19,6 +19,9 @@ import {
 const initialState: PwaReduxShape = {
   started: false,
   onboarding: true,
+  searching: false,
+  searchMode: "address",
+  searchStr: "",
   currencies,
   selectedCurrency: "EUR",
   theme,
@@ -26,7 +29,6 @@ const initialState: PwaReduxShape = {
   transactions,
   subscribed,
   topfive,
-  
 }
 
 export const pwaSlice = createSlice({

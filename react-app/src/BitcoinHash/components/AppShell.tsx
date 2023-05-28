@@ -1,7 +1,7 @@
 import React from "react"
 import {
   Box,
-  Card,
+  Avatar,
   CardHeader,
 } from "@mui/material"
 import {
@@ -12,6 +12,7 @@ import {
   Font,
   Search,
   Onboarding,
+  
 } from "../"
 
 export default function AppShell() {  
@@ -25,12 +26,12 @@ export default function AppShell() {
 
   return (<>
             <Box sx={{m:1}}>
-              <Card>
+              
                 <CardHeader 
-                  title={<Font variant="giant">
+                  action={<Avatar src="/svg/logo.svg" alt={"Bitcoin#"}/>}
+                  title={<Font variant="giant" color="white">
                             Bitcoin#
                           </Font>}/>
-              </Card>
               <Onboarding />
               <Search />
             </Box>
