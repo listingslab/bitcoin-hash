@@ -3,10 +3,11 @@ import * as React from 'react'
 import {
   styled, 
   alpha,
+  Box,
+  Card,
   Grid,
   InputBase,
   FormControl,
-  Box,
   RadioGroup,
   FormControlLabel,
   Radio,
@@ -58,46 +59,49 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function Search() {  
   return (<>
-            <Box sx={{m:1}}>
-              <Grid container>
+            <Box sx={{my:1}}>
+              
+              <Card>
+                <Grid container>
 
-                <Grid item>
-                  <Box sx={{mx:1}}>
-                    <FormControl>
-                      <RadioGroup
-                        row
-                        aria-labelledby="search-group-label"
-                        defaultValue="addresses"
-                        name="search-group"
-                      >
-                        <FormControlLabel 
-                          value="addresses" 
-                          control={<Radio />} 
-                          label="Addresses" 
-                        />
-                        <FormControlLabel 
-                          value="transactions" 
-                          control={<Radio />} 
-                          label="Transactions" 
-                        />
-                      </RadioGroup>
-                    </FormControl>
-                  </Box>
+                  <Grid item sx={{p:1.5}}>
+                    <Box sx={{mx:1}}>
+                      <FormControl>
+                        <RadioGroup
+                          row
+                          aria-labelledby="search-group-label"
+                          defaultValue="addresses"
+                          name="search-group"
+                        >
+                          <FormControlLabel 
+                            value="addresses" 
+                            control={<Radio />} 
+                            label="Addresses" 
+                          />
+                          <FormControlLabel 
+                            value="transactions" 
+                            control={<Radio />} 
+                            label="Transactions" 
+                          />
+                        </RadioGroup>
+                      </FormControl>
+                    </Box>
+                  </Grid>
+
+                  <Grid item sx={{flexGrow:1, p:1.5}} >
+                    <SearchBox>
+                      <SearchIconWrapper>
+                        <Icon icon="search" color="primary" />
+                      </SearchIconWrapper>
+                      <StyledInputBase
+                        placeholder={`Search…`}
+                        inputProps={{ 'aria-label': 'search' }}
+                      />
+                    </SearchBox>
+                  </Grid>
+
                 </Grid>
-
-                <Grid item sx={{flexGrow:1}}>
-                  <SearchBox>
-                    <SearchIconWrapper>
-                      <Icon icon="search" color="primary" />
-                    </SearchIconWrapper>
-                    <StyledInputBase
-                      placeholder={`Search…`}
-                      inputProps={{ 'aria-label': 'search' }}
-                    />
-                  </SearchBox>
-                </Grid>
-
-              </Grid>
+              </Card>
             </Box>
           </>
   )

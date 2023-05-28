@@ -1,5 +1,4 @@
 {
-
   "scripts": {
     "dev": "npm start",
     "test": "clear && cd react-app && npm test",
