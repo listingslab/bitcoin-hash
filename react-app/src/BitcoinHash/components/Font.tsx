@@ -8,7 +8,7 @@ export function Font(props: any) {
   const { variant, fontSize, color, children, align, width, /*overflow*/ } = props  
   let textAlign = "left"
   let w: any = "100%"
-  let c = theme.palette.secondary.main
+  let c = theme.palette.text.secondary
   if (color) c = color
   if (width) w = width
   let textfontSize: any = "1rem"
@@ -21,12 +21,14 @@ export function Font(props: any) {
   if (variant === "title") {
     textfontSize = "1.2rem"
     lineHeight = "1.4rem"
-    c = theme.palette.primary.main
   }
   if (variant === "description") {
     textfontSize = "1.1rem"
     lineHeight = "1.3rem"
-    c = theme.palette.primary.main
+  }
+  if (variant === "giant") {
+    textfontSize = "1.6rem"
+    lineHeight = "1.75rem"
   }
   if (variant === "subheader") {
     textfontSize = "1.1rem"

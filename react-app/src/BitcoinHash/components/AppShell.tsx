@@ -1,10 +1,8 @@
 import React from "react"
 import {
   Box,
-  Avatar,
   Card,
   CardHeader,
-  IconButton,
   Grid,
 } from "@mui/material"
 import {
@@ -13,78 +11,62 @@ import {
   startApp,
   selectPWA,
   Font,
-  Icon,
-  CurrencyMenu,
-  Addresses,
-  Transactions,
-  Subscribed,
-  TopFive,
-  LatestBlocks,
+  Search,
+  Onboarding,
 } from "../"
 
-export default function AppShell() {
-  
+export default function AppShell() {  
   const pwa = usePwaSelect(selectPWA)
   const dispatch = usePwaDispatch()
   React.useEffect(() => {
     const {started} = pwa
-    if (!started){
-      // @ts-ignore
-      dispatch(startApp())
-    }
+    // @ts-ignore
+    if (!started) dispatch(startApp())
   }, [pwa, dispatch])
 
   return (<>
             <Box sx={{m:1}}>
               <Card>
                 <CardHeader 
-                  avatar={<IconButton
-                              onClick={(e: React.MouseEvent) => {
-                                e.preventDefault()
-                                window.open(`/`, "_self")
-                            }}>
-                              <Avatar src="/svg/logo.svg" alt={"Bitcoin Hash"}/>
-                            </IconButton>}
-                  title={<Font variant="title">
+                  title={<Font variant="giant">
                           Bitcoin Hash
                         </Font>}
-                  subheader={<Font>
-                        Search/Subscribe BTC blockchain hashes
-                      </Font>}
-                  action={<>
-                    <Box sx={{display:"flex"}}>
-                        <Box sx={{flexGrow:1}} />
-                        <IconButton
-                          sx={{mt:-1}}
-                          onClick={(e: React.MouseEvent) => {
-                            e.preventDefault()
-                            window.open(`https://github.com/listingslab/bitcoin-hash`, "_blank")
-                        }}>
-                          <Icon icon="github" />
-                        </IconButton>
-                        <CurrencyMenu />
-                    </Box>
-                  </>} 
                 />
+                <Grid container>
+                  <Grid item xs={12}>
+                    <Search />
+                  </Grid>
+                </Grid>
               </Card>
+              <Onboarding />
             </Box>
-                
-            <Grid container sx={{mt:-1}}>
-              <Grid item xs={12} sm={12}>
-                <LatestBlocks />
-                <Subscribed />
-                <TopFive />
-              </Grid>
-              <Grid item xs={12} sm={8}>
-                <Addresses />
-                <Transactions />
-              </Grid>
-            </Grid>
-          
           </>)
 }
 
 /*
 const output: any = null
 {output ? <pre>{JSON.stringify(output, null, 2)}</pre> : null}
+action={<>
+  <Box sx={{display:"flex"}}>
+      <Box sx={{flexGrow:1}} />
+      <IconButton
+        sx={{mt:-1}}
+        onClick={(e: React.MouseEvent) => {
+          e.preventDefault()
+          window.open(`https://github.com/listingslab/bitcoin-hash`, "_blank")
+      }}>
+        <Icon icon="github" />
+      </IconButton>
+      <CurrencyMenu />
+  </Box>
+</>}
+
+avatar={<IconButton
+                              onClick={(e: React.MouseEvent) => {
+                                e.preventDefault()
+                                window.open(`/`, "_self")
+                            }}>
+                              <Avatar src="/svg/logo.svg" alt={"Bitcoin Hash"}/>
+                            </IconButton>}
+
 */

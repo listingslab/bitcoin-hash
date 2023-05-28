@@ -7,20 +7,25 @@ import {
 import {
   usePwaSelect,
   selectPWA,
+  Font,
 } from ".."
 
-export default function Addresses() {
+export default function Onboarding() {
   const pwa = usePwaSelect(selectPWA)
-  const {addresses} = pwa
-  if (!addresses.length) return null
+
   return (<>
-          <Box sx={{m:1}}>
+          <Box sx={{my:1}}>
             <Card sx={{}}>
               <CardContent>
-                
-                <pre>{JSON.stringify(addresses, null, 2)}</pre>
+                <Font>
+                    Onboarding
+                </Font>
               </CardContent>
             </Card>
           </Box>
         </>)
 }
+
+/*
+<pre>{JSON.stringify(pwa, null, 2)}</pre>
+*/

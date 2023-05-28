@@ -7,7 +7,6 @@ import {
 import {
   usePwaSelect,
   selectPWA,
-  Search,
 } from "../"
 
 export default function Transactions() {
@@ -18,9 +17,6 @@ export default function Transactions() {
             <Box sx={{m:1}}>
               <Card sx={{}}>
                 <CardContent>
-                  <Search 
-                    type="transactions"
-                  />
                 </CardContent>
                 <pre>{JSON.stringify(transactions, null, 2)}</pre>
               </Card>
