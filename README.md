@@ -1,4 +1,4 @@
-## ![alt text](./react-app/public/svg/logo16.svg "Bitcoin Hash Logo")  Bitcoin Hash
+## ![alt text](./react-app/public/svg/logo16.svg "Bitcoin Hash Logo")  Bitcoin#
 
 Bootstrapping from recent work, everything needed to build an app quickly is already written.  
 Even the [Documentation](./react-app/public/markdown/)

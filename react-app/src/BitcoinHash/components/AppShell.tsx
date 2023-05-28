@@ -29,7 +29,7 @@ export default function AppShell() {
               <Card>
                 <CardHeader 
                   title={<Font variant="giant">
-                          Bitcoin Hash
+                          Bitcoin#
                         </Font>}
                 />
                 <Grid container>
