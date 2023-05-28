@@ -28,9 +28,9 @@ a {
   color: #3B3B3B;
   text-decoration: none;
 }
-a:hover {
+/* a:hover {
   color: #2b1616;
-}
+} */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

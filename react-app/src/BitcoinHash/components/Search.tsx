@@ -27,9 +27,9 @@ import {
 
 const SearchBox = styled('div')(({ theme }) => ({
   position: 'relative',
-  color: theme.palette.secondary.main,
+  color: theme.palette.common.white,
   borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.primary.main, 0.15),
+  backgroundColor: alpha(theme.palette.common.white, 0.15),
   '&:hover': {
     backgroundColor: alpha(theme.palette.primary.main, 0.25),
   },
@@ -86,17 +86,17 @@ export default function Search() {
   
 
   return (<>
-            <Box sx={{my:1}}>
+            <Box sx={{my:0}}>
               <Card>
 
                 { searching ? <LinearProgress /> : null }
                 
                 <Grid container>
 
-                  <Grid item sx={{flexGrow:1, p:1.75}} >
+                  <Grid item sx={{flexGrow:1, p: 1.75}} >
                     <SearchBox>
                       <SearchIconWrapper>
-                        <Icon icon="hash" color="primary" />
+                        <Icon icon="hash" color="secondary" />
                       </SearchIconWrapper>
                       <StyledInputBase
                         placeholder={`Search…`}
@@ -116,14 +116,14 @@ export default function Search() {
                             label="Addresses" 
                             value="address" 
                             onClick={() => onRadioClick("address")}
-                            control={<Radio />} 
+                            control={<Radio color="secondary"/>} 
                           />
 
                           <FormControlLabel 
                             label="Transactions"
                             value="transaction" 
                             onClick={() => onRadioClick("transaction")}
-                            control={<Radio />}
+                            control={<Radio color="secondary"/>}
                           />
 
                         </RadioGroup>
@@ -136,7 +136,7 @@ export default function Search() {
                 {searchStr !== "" && !searching ? <CardActions>
                   <Button
                     fullWidth
-                    variant="outlined"
+                    variant="contained"
                     onClick={() => onSearchClick()}>
                     <Icon icon="search"/>
                     <span style={{marginLeft:8, marginRight:8}}>

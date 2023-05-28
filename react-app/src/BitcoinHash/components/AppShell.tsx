@@ -28,8 +28,8 @@ export default function AppShell() {
             <Box sx={{m:1}}>
               
                 <CardHeader 
-                  action={<Avatar src="/svg/logo.svg" alt={"Bitcoin#"}/>}
-                  title={<Font variant="giant" color="white">
+                  avatar={<Avatar src="/svg/logo.svg" alt={"Bitcoin#"}/>}
+                  action={<Font variant="giant" color="white">
                             Bitcoin#
                           </Font>}/>
               <Onboarding />

@@ -43,7 +43,7 @@ Secondary Colour
 (lighter)
 
 ```shell
-#3B3B3B
+#C09F52
 ```
 
 - Persistant Data 

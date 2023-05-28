@@ -1,5 +1,6 @@
 import React from "react"
 import {
+  useTheme,
   Box,
   Card,
   CardContent,
@@ -19,6 +20,8 @@ import {
 
 export default function Onboarding() {
   const pwa = usePwaSelect(selectPWA)
+  const theme = useTheme()
+  const linkCol = theme.palette.secondary.main
   const dispatch = usePwaDispatch()
   const {onboarding} = pwa
   if(!onboarding) return null
@@ -35,7 +38,7 @@ export default function Onboarding() {
             <Card sx={{}}>
               <CardHeader 
                 title={<Font variant="giant">
-                        Get started
+                        Start
                       </Font>}
                 action={<IconButton
                   sx={{mt:-1}}
@@ -50,16 +53,16 @@ export default function Onboarding() {
               <CardContent>
                 
                 <Font>
-                    Search for a specific BitCoin BlockChain address or transaction. 
+                    Search for a specific BitCoin BlockChain address or transaction.<br />
                     Paste hash into the search box. 
-                    Or try these <Link
-                            sx={{cursor: "pointer"}}
+                    <br />Or try these <Link
+                            sx={{cursor: "pointer", color: linkCol}}
                             onClick={() => onTestClick({
                               searchMode: "address",
                               searchStr: "bc1qgyrmw4ncp2rgkatz8p8uq86pls3xpk6u9kzmc7",
                             })}>
                     Address#</Link> or <Link
-                        sx={{cursor: "pointer"}}
+                        sx={{cursor: "pointer", color: linkCol}}
                         onClick={() => onTestClick({
                           searchMode: "transaction",
                           searchStr: "2892bc7fb0c2efe34f655f659bffb4d694ffc33f824cb0752da5ecb2d2ff39dc",
@@ -68,7 +71,6 @@ export default function Onboarding() {
                       Transaction#
                     </Link>
                 </Font>
-                <Box sx={{my: 2}}/>
               </CardContent>
             </Card>
           </Box>
