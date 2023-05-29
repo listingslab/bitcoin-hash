@@ -7,6 +7,7 @@ import Search from "./components/Search"
 import CurrencyMenu from "./components/CurrencyMenu"
 import BitQuery from "./components/BitQuery"
 import Notifyer from "./components/Notifyer"
+import AccordionTestData from "./components/AccordionTestData"
 // Theme
 import MuiTheme from "./theme/MuiTheme"
 import {makeTheme} from "./theme/makeTheme"
@@ -55,6 +56,7 @@ export {
   BitQuery,
   CurrencyMenu,
   Notifyer,
+  AccordionTestData,
   Icon,
   Font,
 }

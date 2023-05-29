@@ -12,7 +12,8 @@ import {
 } from "@mui/material"
 import {
   Icon,
-  Font,
+  CurrencyMenu,
+  AccordionTestData,
   Search,
   Notifyer,
   usePwaSelect,
@@ -40,13 +41,14 @@ export default function AppShell() {
 
   return (<>
       <CssBaseline />
-      <Paper square sx={{ p: 2, mt: 2 }}>
+      <Paper sx={{ p: 2, mt: 2 }}>
         {searching ? <LinearProgress color="secondary"/> : 
         <Box sx={{height: 4}} /> }
         <Search />
       </Paper>
+      <AccordionTestData />
       
-      <AppBar position="fixed" color="secondary" sx={{ top: 'auto', bottom: 0 }}>
+      <AppBar position="fixed" color="primary" sx={{ top: 'auto', bottom: 0 }}>
         <Toolbar>
           <StyledFab 
             color="primary"
@@ -57,6 +59,7 @@ export default function AppShell() {
             <Icon icon="github" />
           </StyledFab>
           <Box sx={{ flexGrow: 1 }} />
+          <CurrencyMenu />
           {/* <IconButton 
             color="inherit" 
             onClick={(e: React.MouseEvent) => {

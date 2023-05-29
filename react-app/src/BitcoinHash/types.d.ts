@@ -8,7 +8,8 @@ export type PwaReduxShape = {
   searchStr: string
   searchStrT: string
   searchStrA: string
-  searchResults: any
+  searchResultsA: any
+  searchResultsT: any
   selectedCurrency: string
   currencies: Array<CurrencyShape>
   persisted: boolean
