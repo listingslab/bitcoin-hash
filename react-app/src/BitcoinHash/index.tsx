@@ -28,6 +28,7 @@ import { updateSearchMode } from "./redux/actions/updateSearchMode"
 import { updateSearchStr } from "./redux/actions/updateSearchStr"
 import { search } from "./redux/actions/search"
 import { toggleNotifyer } from "./redux/actions/toggleNotifyer"
+import { cancelSearch } from "./redux/actions/cancelSearch"
 
 export {
   BitcoinHash,
@@ -56,5 +57,6 @@ export {
   updateSearchMode,
   updateSearchStr,
   toggleNotifyer,
+  cancelSearch,
   search,
 }

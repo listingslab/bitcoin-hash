@@ -20,7 +20,6 @@ export default function AppShell() {
   const theme = useTheme()
   const titleColor = theme.palette.secondary.main
 
-
   const pwa = usePwaSelect(selectPWA)
   const dispatch = usePwaDispatch()
   React.useEffect(() => {
@@ -42,3 +41,27 @@ export default function AppShell() {
           </>)
 }
 
+/*
+<List sx={{ mb: 2 }}>
+          {messages.map(({ id, primary, secondary, person }) => (
+            <React.Fragment key={id}>
+              {id === 1 && (
+                <ListSubheader sx={{ bgcolor: 'background.paper' }}>
+                  Today
+                </ListSubheader>
+              )}
+              {id === 3 && (
+                <ListSubheader sx={{ bgcolor: 'background.paper' }}>
+                  Yesterday
+                </ListSubheader>
+              )}
+              <ListItem button>
+                <ListItemAvatar>
+                  <Avatar alt="Profile Picture" src={person} />
+                </ListItemAvatar>
+                <ListItemText primary={primary} secondary={secondary} />
+              </ListItem>
+            </React.Fragment>
+          ))}
+        </List>
+*/

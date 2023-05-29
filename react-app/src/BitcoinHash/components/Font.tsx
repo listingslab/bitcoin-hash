@@ -34,7 +34,10 @@ export function Font(props: any) {
     textfontSize = "1.1rem"
     lineHeight = "1.2rem"
   }
-
+  if (variant === "small") {
+    textfontSize = "0.9rem"
+    lineHeight = "1rem"
+  }
   if (fontSize) {
     lineHeight = fontSize
     textfontSize = fontSize
