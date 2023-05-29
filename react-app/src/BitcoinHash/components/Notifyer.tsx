@@ -19,29 +19,25 @@ export default function Notifyer() {
   } = pwa
   if( !notifyer ) return null
   let { severity, message } = notifyer
-
-  const closeNotifyer = () => {
-    dispatch(toggleNotifyer(null))
-  }
+  const closeNotifyer = () => dispatch(toggleNotifyer(null))
 
   return (
     <Snackbar
       open
       anchorOrigin={{ 
         vertical:"top", 
-        horizontal:"center" 
+        horizontal:"right" 
       }}
-      autoHideDuration={ 5000 }
+      autoHideDuration={ 4000 }
       onClose={closeNotifyer}
     >
       <Alert 
         onClose={closeNotifyer} 
-        variant="outlined"
+        variant="filled"
         severity={ severity }
         sx={{ width: '100%' }}>
           { message }
       </Alert>
     </Snackbar>
-
   )
 }

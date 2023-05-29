@@ -7,12 +7,14 @@ export const search =
   ): any =>
   async (dispatch: any) => {
     try {
-      const searchMode = ""
-      const searchStr = ""
       dispatch(setPwaKey({ key: "searching", value: true }))
-      if (searchMode){
-        dispatch(setPwaKey({ key: "searchingStr", value: searchStr }))
-      }
+      setTimeout(() => {
+        dispatch(setPwaKey({ key: "searching", value: false }))
+        dispatch(setPwaKey({ key: "notifyer", value: {
+          severity: "success",
+          message: "Waiting on apollo hooks"
+        } }))
+      }, 1000)
     } catch (error: any) {
       console.log("Action error: search", error)
     }
