@@ -1,5 +1,8 @@
 ## Bitcoin Mainnet transaction hash examples
 
+The [demo app](https://bitcoin-hash-demo.web.app/) consists of a React/MUI interface to the bitquery GraphQL. You can look up either an 
+address or a transaction by it's hash. Once a record is found, the user can subscribe to updates, 
+achives with @apollo's rect hooks (hopefully)
 
 `bitcoin/address/bc1qgyrmw4ncp2rgkatz8p8uq86pls3xpk6u9kzmc7`
 
