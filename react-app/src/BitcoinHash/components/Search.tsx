@@ -91,6 +91,7 @@ export default function Search() {
 
                 { searching ? <LinearProgress /> : null }
                 
+                
                 <Grid container>
 
                   <Grid item sx={{flexGrow:1, p: 1.75}} >

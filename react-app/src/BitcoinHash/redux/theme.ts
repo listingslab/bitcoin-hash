@@ -4,6 +4,6 @@ export const theme: ThemeShape = {
   title: "Dark Grey",
   mode: "dark", 
   font: "quicksand",
-  primaryColor: "#2b1616",
+  primaryColor: "#3B3B3B",
   secondaryColor: "#C09F52",
 }
