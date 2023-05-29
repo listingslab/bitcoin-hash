@@ -3,14 +3,9 @@ import BitcoinHash from "./BitcoinHash"
 import AppShell from "./components/AppShell"
 import Icon from "./components/Icon"
 import {Font} from "./components/Font"
-import Addresses from "./components/Addresses"
-import Transactions from "./components/Transactions"
 import Search from "./components/Search"
 import CurrencyMenu from "./components/CurrencyMenu"
-import Subscribed from "./components/Subscribed"
-import TopFive from "./components/TopFive"
 import BitQuery from "./components/BitQuery"
-import LatestBlocks from "./components/LatestBlocks"
 import Onboarding from "./components/Onboarding"
 import Notifyer from "./components/Notifyer"
 // Theme
@@ -32,6 +27,7 @@ import { getBitquery } from "./redux/actions/getBitquery"
 import { updateSearchMode } from "./redux/actions/updateSearchMode"
 import { updateSearchStr } from "./redux/actions/updateSearchStr"
 import { search } from "./redux/actions/search"
+import { toggleNotifyer } from "./redux/actions/toggleNotifyer"
 
 export {
   BitcoinHash,
@@ -47,15 +43,10 @@ export {
   usePwaSelect,
   makeTheme,
   Search,
-  LatestBlocks,
-  TopFive,
   BitQuery,
   CurrencyMenu,
-  Subscribed,
-  Transactions,
   Onboarding,
   Notifyer,
-  Addresses,
   Icon,
   Font,
   selectPWA,
@@ -64,5 +55,6 @@ export {
   getBitquery,
   updateSearchMode,
   updateSearchStr,
+  toggleNotifyer,
   search,
 }

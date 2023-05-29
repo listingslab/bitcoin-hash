@@ -1,32 +1,28 @@
 import * as React from 'react'
 import {
-  useFeatureSelect,
-  useFeatureDispatch,
-} from "../../Shared/store/hooks"
-import {
   Snackbar,
   Alert,
 } from "@mui/material"
-import {
-  selectShared,
-  setSharedKey,
-} from "../../Shared"
+import { 
+  usePwaSelect, 
+  usePwaDispatch, 
+  selectPWA, 
+  toggleNotifyer,
+} from ".."
 
 export default function Notifyer() {
-  
-  const dispatch = useFeatureDispatch()
-  const shared = useFeatureSelect(selectShared)
-  const { 
-    notifying, 
-  } = shared
-  if( !notifying ) return null
-  let { severity, message } = notifying;
-  if ( typeof message !== "string") return null
 
-  const closeSnackbar = () =>  dispatch(setSharedKey({
-    key: "notifying", 
-    value: null 
-  }))
+  const pwa = usePwaSelect(selectPWA)
+  const dispatch = usePwaDispatch()
+  const { 
+    notifyer, 
+  } = pwa
+  if( !notifyer ) return null
+  let { severity, message } = notifyer
+
+  const closeNotifyer = () => {
+    dispatch(toggleNotifyer(null))
+  }
 
   return (
     <Snackbar
@@ -36,16 +32,16 @@ export default function Notifyer() {
         horizontal:"center" 
       }}
       autoHideDuration={ 5000 }
-      onClose={ closeSnackbar }
+      onClose={closeNotifyer}
     >
       <Alert 
-        onClose={ closeSnackbar } 
+        onClose={closeNotifyer} 
         variant="outlined"
         severity={ severity }
-        sx={{ width: '100%', background: "white" }}>
+        sx={{ width: '100%' }}>
           { message }
       </Alert>
     </Snackbar>
-    
+
   )
 }

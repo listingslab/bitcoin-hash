@@ -14,6 +14,9 @@ export function makeTheme(
       secondary: {
         main: secondary,
       },
+      success: {
+        main: secondary,
+      },
       background: {
         // default: primary,
         // paper: lighten(primary, 0.8),
