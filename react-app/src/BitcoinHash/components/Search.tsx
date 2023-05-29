@@ -13,7 +13,6 @@ import {
   FormControlLabel,
   LinearProgress,
   Radio,
-  Link,
 } from "@mui/material"
 import {
   usePwaSelect,
@@ -82,20 +81,12 @@ export default function Search() {
   }
   const onRadioClick = (searchMode: string) => {
     dispatch (updateSearchMode(searchMode))
-    dispatch (updateSearchStr(""))
   }
   
-  const onTestClick = (payload: any) => {
-    const {searchMode, searchStr} = payload
-    dispatch (updateSearchMode(searchMode))
-    dispatch (updateSearchStr(searchStr))
-  }
-  
-  console.log("searchStr", searchStr)
+  // console.log("searchStr", searchStr)
   return (<>
                 <Grid container>
                   
-
                   <Grid item>
                     <Box sx={{mx:2}}>
                       <FormControl>
@@ -103,14 +94,7 @@ export default function Search() {
                           <FormControlLabel 
                             label={<>
                               <Font variant="small">
-                                <Link
-                                  sx={{cursor: "pointer", color: linkCol}}
-                                  onClick={() => onTestClick({
-                                    searchMode: "address",
-                                    searchStr: "bc1qgyrmw4ncp2rgkatz8p8uq86pls3xpk6u9kzmc7",
-                                  })}>
-                                  Test
-                                </Link> Addresses
+                                Addresses
                               </Font></>}
                             value="address" 
                             onClick={() => onRadioClick("address")}
@@ -119,16 +103,8 @@ export default function Search() {
                           <FormControlLabel 
                             label={<>
                               <Font variant="small">
-                                <Link
-                                  sx={{cursor: "pointer", color: linkCol}}
-                                  onClick={() => onTestClick({
-                                    searchMode: "transaction",
-                                    searchStr: "2892bc7fb0c2efe34f655f659bffb4d694ffc33f824cb0752da5ecb2d2ff39dc",
-                                  })}>
-                                  Test
-                                </Link> Transactions
+                                Transactions
                               </Font></>}
-                          
                             value="transaction" 
                             onClick={() => onRadioClick("transaction")}
                             control={<Radio color="secondary"/>}

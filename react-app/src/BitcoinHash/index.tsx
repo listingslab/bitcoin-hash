@@ -6,7 +6,6 @@ import {Font} from "./components/Font"
 import Search from "./components/Search"
 import CurrencyMenu from "./components/CurrencyMenu"
 import BitQuery from "./components/BitQuery"
-import Onboarding from "./components/Onboarding"
 import Notifyer from "./components/Notifyer"
 // Theme
 import MuiTheme from "./theme/MuiTheme"
@@ -33,23 +32,17 @@ import { cancelSearch } from "./redux/actions/cancelSearch"
 export {
   BitcoinHash,
   AppShell,
-  theme,
-  currencies,
+  WrapRedux,
   store,
   persistor,
-  setPwaKey,
-  WrapRedux,
-  MuiTheme,
   usePwaDispatch,
   usePwaSelect,
+  setPwaKey,
+  MuiTheme,
   makeTheme,
-  Search,
-  BitQuery,
-  CurrencyMenu,
-  Onboarding,
-  Notifyer,
-  Icon,
-  Font,
+  theme,
+  currencies,
+
   selectPWA,
   startApp,
   setCurrency,
@@ -59,4 +52,12 @@ export {
   toggleNotifyer,
   cancelSearch,
   search,
+  
+  Search,
+  BitQuery,
+  CurrencyMenu,
+  Notifyer,
+  Icon,
+  Font,
+  
 }
