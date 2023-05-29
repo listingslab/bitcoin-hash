@@ -5,8 +5,9 @@ export type PwaReduxShape = {
   theme: ThemeShape
   notifyer: NotifyerShape|null
   searching: boolean
-  searchMode: string
-  searchStr: string|null
+  searchStr: string
+  searchStrT: string
+  searchStrA: string
   searchResults: any
   selectedCurrency: string
   currencies: Array<CurrencyShape>

@@ -119,6 +119,14 @@ export default function Icon(props: any) {
       iconFragment = <HostIcon color={color} />
       break
 
+      case "transaction":
+        iconFragment = <DocIcon color={color} />
+        break
+
+    case "address":
+      iconFragment = <CTAIcon color={color} />
+      break
+
     case "hash":
       iconFragment = <HashIcon color={color} />
       break

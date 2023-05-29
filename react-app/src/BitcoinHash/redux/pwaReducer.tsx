@@ -12,8 +12,9 @@ import {
 const initialState: PwaReduxShape = {
   started: false,
   searching: false,
-  searchMode: "address",
   searchStr: "",
+  searchStrT: "",
+  searchStrA: "",
   searchResults: null,
   currencies,
   selectedCurrency: "EUR",

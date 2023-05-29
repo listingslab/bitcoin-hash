@@ -23,11 +23,11 @@ import {persistor} from "./redux/store"
 import { startApp } from "./redux/actions/startApp"
 import { setCurrency } from "./redux/actions/setCurrency"
 import { getBitquery } from "./redux/actions/getBitquery"
-import { updateSearchMode } from "./redux/actions/updateSearchMode"
-import { updateSearchStr } from "./redux/actions/updateSearchStr"
-import { search } from "./redux/actions/search"
+import { updateSearchStrT } from "./redux/actions/updateSearchStrT"
+import { updateSearchStrA } from "./redux/actions/updateSearchStrA"
+import { searchAddresses } from "./redux/actions/searchAddresses"
+import { searchTransactions } from "./redux/actions/searchTransactions"
 import { toggleNotifyer } from "./redux/actions/toggleNotifyer"
-import { cancelSearch } from "./redux/actions/cancelSearch"
 
 export {
   BitcoinHash,
@@ -42,22 +42,19 @@ export {
   makeTheme,
   theme,
   currencies,
-
   selectPWA,
   startApp,
   setCurrency,
   getBitquery,
-  updateSearchMode,
-  updateSearchStr,
+  updateSearchStrT,
+  updateSearchStrA,
   toggleNotifyer,
-  cancelSearch,
-  search,
-  
+  searchTransactions,
+  searchAddresses,
   Search,
   BitQuery,
   CurrencyMenu,
   Notifyer,
   Icon,
   Font,
-  
 }

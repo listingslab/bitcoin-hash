@@ -3,24 +3,19 @@ import {
   styled,
   alpha,
   Box,
-  Button,
+  IconButton,
   Grid,
   InputBase,
-  FormControl,
-  RadioGroup,
-  FormControlLabel,
-  Radio,
 } from "@mui/material"
 import {
   usePwaSelect,
   usePwaDispatch,
-  search,
-  cancelSearch,
-  updateSearchMode,
-  updateSearchStr,
+  searchTransactions,
+  searchAddresses,
+  updateSearchStrA,
+  updateSearchStrT,
   selectPWA,
   Icon,
-  Font,
 } from "../"
 
 const SearchBox = styled("div")(({ theme }) => ({
@@ -62,105 +57,84 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 export default function Search() {  
   const pwa = usePwaSelect(selectPWA)
   const dispatch = usePwaDispatch()
-  const {searchMode, searchStr, searching, searchResults} = pwa
-  const onSearchClick = () => dispatch (search())
-  const onCancelSearchClick = () => dispatch (cancelSearch())
-  const onUpdateSearchStr = (searchStr: string) => {
-    dispatch (updateSearchStr(searchStr))
-  }
-  const onRadioClick = (searchMode: string) => {
-    dispatch (updateSearchMode(searchMode))
-  }
-  
+  const {searchStrT, searchStrA, searching} = pwa
   return (<>
             <Grid container>
-              <Grid item sx={{flexGrow:1}} >
+              <Grid item sx={{flexGrow:1}}>
+                <Box sx={{mx: 1, pl:1}}>
+                <SearchBox>
+                  <SearchIconWrapper>
+                    <Icon icon="transaction" color="secondary" />
+                  </SearchIconWrapper>
+                  <StyledInputBase
+                    disabled={!searching ? false : true}
+                    fullWidth
+                    placeholder={`Search BTC transactions...`}
+                    value={searchStrT}
+                    onChange={(e: any) => dispatch (updateSearchStrT(e.target.value))}
+                  />
+                </SearchBox>
+                </Box>
+              </Grid>
+              <Grid item>
                 <Box sx={{mx: 0}}>
-                  <Box sx={{mx: 2}}>
-                    <pre style={{fontSize:10}}>
-                      Test address# bc1qgyrmw4ncp2rgkatz8p8uq86pls3xpk6u9kzmc7<br />
-                      Test transaction# 2892bc7fb0c2efe34f655f659bffb4d694ffc33f824cb0752da5ecb2d2ff39dc
-                    </pre>
-                  </Box>
-                  <SearchBox>
-                    <SearchIconWrapper>
-                      <Icon icon="hash" color="secondary" />
-                    </SearchIconWrapper>
-                    <StyledInputBase
-                      fullWidth
-                      placeholder={`Searching ${searchMode === "address" 
-                      ? "address hashes" : "transaction hashes"}...`}
-                      value={searchStr}
-                      onChange={(e: any) => onUpdateSearchStr(e.target.value)}
-                    />
-                  </SearchBox>
-                  
-                </Box>
-              </Grid>
-
-              <Grid item sx={{flexShrink:1}}>
-                <Box sx={{mx:2.5}}>
-                  <FormControl>
-                    <RadioGroup value={searchMode}>
-                      <FormControlLabel 
-                        label={<>
-                          <Font variant="small">
-                            Addresses
-                          </Font></>}
-                        value="address" 
-                        onClick={() => onRadioClick("address")}
-                        control={<Radio size="small"/>} 
-                      />
-                      <FormControlLabel 
-                        label={<>
-                          <Font variant="small">
-                            Transactions
-                          </Font></>}
-                        value="transaction" 
-                        onClick={() => onRadioClick("transaction")}
-                        control={<Radio size="small"/>}
-                      />
-                    </RadioGroup>
-                  </FormControl>
-                </Box>
-              </Grid>
-
-              <Grid item sx={{flexShrink:1}} >
-                <Box sx={{m: 2}}>
-                  { !searching ? <Button
-                    variant="text"
+                  <IconButton
                     color="secondary"
-                    disabled={searchStr === "" ? true : false}
-                    onClick={() => onSearchClick()}>
-                    
-                    <span style={{marginLeft:8, marginRight:8}}>
-                      <Font>Search</Font>
-                    </span>
-                    <Icon icon="search"/>
-                  </Button> : 
-                  <Button
-                    variant="text"
-                    color="secondary"
-                    onClick={() => onCancelSearchClick()}>
-                    <span style={{marginLeft:8, marginRight:8}}>
-                      <Font>Cancel</Font>
-                    </span>
+                    disabled={searchStrT !== "" || searching ? false : true}
+                    onClick={() => {
+                      dispatch (updateSearchStrT(""))
+                    }}>
                     <Icon icon="close"/>
-                  </Button> }
+                  </IconButton>
+                  <IconButton
+                     sx={{mr: 2}}
+                    color="secondary"
+                    disabled={searchStrT === "" || searching ? true : false}
+                    onClick={() => dispatch (searchTransactions(searchStrT))}>
+                    <Icon icon="search"/>
+                  </IconButton>
                 </Box>
               </Grid>
-              {searchResults ? <Grid item xs={12}>
-                <pre>
-                  {JSON.stringify(searchResults, null, 2)}  
-                </pre>
-              </Grid> : null }
             </Grid>
-      </>
+
+            <Grid container sx={{mt:2}}>
+              <Grid item sx={{flexGrow:1}}>
+                <Box sx={{mx: 1, pl:1}}>
+                <SearchBox>
+                  <SearchIconWrapper>
+                    <Icon icon="address" color="secondary" />
+                  </SearchIconWrapper>
+                  <StyledInputBase
+                    disabled={!searching ? false : true}
+                    fullWidth
+                    placeholder={`Search BTC addresses...`}
+                    value={searchStrA}
+                    onChange={(e: any) => dispatch (updateSearchStrA(e.target.value))}
+                  />
+                </SearchBox>
+                </Box>
+              </Grid>
+              <Grid item>
+                <Box sx={{mx: 0}}>
+                  <IconButton
+                    color="secondary"
+                    disabled={searchStrA !== "" || searching ? false : true}
+                    onClick={() => {
+                      dispatch (updateSearchStrA(""))
+                    }}>
+                    <Icon icon="close"/>
+                  </IconButton>
+                  <IconButton
+                     sx={{mr: 2}}
+                    color="secondary"
+                    disabled={searchStrA === "" || searching ? true : false}
+                    onClick={() => dispatch (searchAddresses(searchStrA))}>
+                    <Icon icon="search"/>
+                  </IconButton>
+                </Box>
+              </Grid>
+            </Grid>
+
+          </>
   )
 }
-
-/*
-<span style={{marginLeft:8, marginRight:8}}>
-  <Font>Search</Font>
-</span>
-*/

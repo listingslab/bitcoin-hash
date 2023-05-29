@@ -17,7 +17,6 @@ import {
   Notifyer,
   usePwaSelect,
   selectPWA,
-  BitQuery,
 } from "./"
 
 const StyledFab = styled(Fab)({
@@ -41,21 +40,13 @@ export default function AppShell() {
 
   return (<>
       <CssBaseline />
-      <Paper square sx={{ pb: '50px', mt: 2 }}>
-
+      <Paper square sx={{ p: 2, mt: 2 }}>
         {searching ? <LinearProgress color="secondary"/> : 
         <Box sx={{height: 4}} /> }
-
-        <Box sx={{ p: 2, pb: 0, mb:2 }}>
-          <Font variant="title" color={titleColor}>
-            Bitcoin#
-          </Font>
-        </Box>
         <Search />
-        <BitQuery />
       </Paper>
       
-      <AppBar position="fixed" color="primary" sx={{ top: 'auto', bottom: 0 }}>
+      <AppBar position="fixed" color="secondary" sx={{ top: 'auto', bottom: 0 }}>
         <Toolbar>
           <StyledFab 
             color="primary"
