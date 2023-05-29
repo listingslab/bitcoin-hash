@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>Bitcoin Hash Logo</title>
+    <title>logo</title>
     <defs>
         <linearGradient x1="50%" y1="50%" x2="50%" y2="98.2263064%" id="linearGradient-1">
-            <stop stop-color="#C09F52" offset="0%"></stop>
-            <stop stop-color="#897036" offset="100%"></stop>
+            <stop stop-color="#3B3B3B" offset="0%"></stop>
+            <stop stop-color="#2B1616" offset="99.9480988%"></stop>
         </linearGradient>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

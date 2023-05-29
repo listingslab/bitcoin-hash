@@ -1,6 +1,10 @@
 {
-  "short_name": "Bitcoin Hash",
+  "short_name": "Demo",
   "name": "Bitcoin Hash",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#3B3B3B",
+  "background_color": "#3B3B3B",
   "icons": [
     {
       "src": "favicon.ico",
@@ -17,9 +21,5 @@
       "type": "image/png",
       "sizes": "512x512"
     }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#C09F52",
-  "background_color": "#C09F52"
+  ]
 }

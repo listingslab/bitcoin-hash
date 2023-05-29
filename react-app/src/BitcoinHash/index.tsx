@@ -1,18 +1,12 @@
 import BitcoinHash from "./BitcoinHash"
+import AppShell from "./AppShell"
 // Components
-import AppShell from "./components/AppShell"
 import Icon from "./components/Icon"
 import {Font} from "./components/Font"
-import Addresses from "./components/Addresses"
-import Transactions from "./components/Transactions"
 import Search from "./components/Search"
-import Address from "./components/Address"
-import Transaction from "./components/Transaction"
 import CurrencyMenu from "./components/CurrencyMenu"
-import Subscribed from "./components/Subscribed"
-import TopFive from "./components/TopFive"
 import BitQuery from "./components/BitQuery"
-import LatestBlocks from "./components/LatestBlocks"
+import Notifyer from "./components/Notifyer"
 // Theme
 import MuiTheme from "./theme/MuiTheme"
 import {makeTheme} from "./theme/makeTheme"
@@ -29,34 +23,41 @@ import {persistor} from "./redux/store"
 import { startApp } from "./redux/actions/startApp"
 import { setCurrency } from "./redux/actions/setCurrency"
 import { getBitquery } from "./redux/actions/getBitquery"
+import { updateSearchMode } from "./redux/actions/updateSearchMode"
+import { updateSearchStr } from "./redux/actions/updateSearchStr"
+import { search } from "./redux/actions/search"
+import { toggleNotifyer } from "./redux/actions/toggleNotifyer"
+import { cancelSearch } from "./redux/actions/cancelSearch"
 
 export {
   BitcoinHash,
   AppShell,
-  theme,
-  currencies,
+  WrapRedux,
   store,
   persistor,
-  setPwaKey,
-  WrapRedux,
-  MuiTheme,
   usePwaDispatch,
   usePwaSelect,
+  setPwaKey,
+  MuiTheme,
   makeTheme,
-  Search,
-  LatestBlocks,
-  Transaction,
-  TopFive,
-  BitQuery,
-  CurrencyMenu,
-  Subscribed,
-  Address,
-  Transactions,
-  Addresses,
-  Icon,
-  Font,
+  theme,
+  currencies,
+
   selectPWA,
   startApp,
   setCurrency,
   getBitquery,
+  updateSearchMode,
+  updateSearchStr,
+  toggleNotifyer,
+  cancelSearch,
+  search,
+  
+  Search,
+  BitQuery,
+  CurrencyMenu,
+  Notifyer,
+  Icon,
+  Font,
+  
 }
