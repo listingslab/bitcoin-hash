@@ -8,7 +8,6 @@ import {
   Toolbar,
   Paper,
   Fab,
-  IconButton,
   LinearProgress,
 } from "@mui/material"
 import {
@@ -60,7 +59,7 @@ export default function AppShell() {
             color="primary"
             onClick={(e: React.MouseEvent) => {
               e.preventDefault()
-              window.open("https://github.com/listingslab/bitcoin-hash/tree/master/react-app/public/markdown", "_blank")
+              window.open("https://github.com/listingslab/bitcoin-hash", "_blank")
             }}>
             <Icon icon="github" />
           </StyledFab>

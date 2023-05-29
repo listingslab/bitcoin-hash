@@ -3,7 +3,7 @@ import {
   styled,
   alpha,
   Box,
-  IconButton,
+  Button,
   Grid,
   InputBase,
   FormControl,
@@ -53,10 +53,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: "inherit",
   "& .MuiInputBase-input": {
     padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    // transition: theme.transitions.create("width"),
-
     [theme.breakpoints.up("md")]: {
     },
   },
@@ -78,40 +75,33 @@ export default function Search() {
   return (<>
             <Grid container>
               <Grid item sx={{flexGrow:1}} >
-                <Box sx={{mx: 2}}>
+                <Box sx={{mx: 0}}>
+                  <Box sx={{mx: 2}}>
+                    <pre style={{fontSize:10}}>
+                      Test address# bc1qgyrmw4ncp2rgkatz8p8uq86pls3xpk6u9kzmc7<br />
+                      Test transaction# 2892bc7fb0c2efe34f655f659bffb4d694ffc33f824cb0752da5ecb2d2ff39dc
+                    </pre>
+                  </Box>
                   <SearchBox>
                     <SearchIconWrapper>
                       <Icon icon="hash" color="secondary" />
                     </SearchIconWrapper>
                     <StyledInputBase
-                      placeholder={`Search ${searchMode === "address" 
+                      fullWidth
+                      placeholder={`Searching ${searchMode === "address" 
                       ? "address hashes" : "transaction hashes"}...`}
                       value={searchStr}
                       onChange={(e: any) => onUpdateSearchStr(e.target.value)}
                     />
                   </SearchBox>
+                  
                 </Box>
               </Grid>
 
-              <Grid item>
-                <Box sx={{mx: 2}}>
-                  { !searching ? <IconButton
-                    color="secondary"
-                    disabled={searchStr === "" ? true : false}
-                    onClick={() => onSearchClick()}>
-                    <Icon icon="search"/>
-                  </IconButton> : <IconButton
-                    color="secondary"
-                    onClick={() => onCancelSearchClick()}>
-                    <Icon icon="close"/>
-                  </IconButton> }
-                </Box>
-              </Grid>
-
-              <Grid item>
+              <Grid item sx={{flexShrink:1}}>
                 <Box sx={{mx:2.5}}>
                   <FormControl>
-                    <RadioGroup row value={searchMode}>
+                    <RadioGroup value={searchMode}>
                       <FormControlLabel 
                         label={<>
                           <Font variant="small">
@@ -135,12 +125,35 @@ export default function Search() {
                 </Box>
               </Grid>
 
+              <Grid item sx={{flexShrink:1}} >
+                <Box sx={{m: 2}}>
+                  { !searching ? <Button
+                    variant="text"
+                    color="secondary"
+                    disabled={searchStr === "" ? true : false}
+                    onClick={() => onSearchClick()}>
+                    
+                    <span style={{marginLeft:8, marginRight:8}}>
+                      <Font>Search</Font>
+                    </span>
+                    <Icon icon="search"/>
+                  </Button> : 
+                  <Button
+                    variant="text"
+                    color="secondary"
+                    onClick={() => onCancelSearchClick()}>
+                    <span style={{marginLeft:8, marginRight:8}}>
+                      <Font>Cancel</Font>
+                    </span>
+                    <Icon icon="close"/>
+                  </Button> }
+                </Box>
+              </Grid>
               {searchResults ? <Grid item xs={12}>
                 <pre>
                   {JSON.stringify(searchResults, null, 2)}  
                 </pre>
               </Grid> : null }
-              
             </Grid>
       </>
   )
