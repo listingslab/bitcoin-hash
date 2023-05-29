@@ -3,11 +3,21 @@
 Bootstrapping from recent work, everything needed to build an app quickly is already written.  
 Even the [Documentation](./react-app/public/markdown/)
 
-### [Challenge](./react-app/public/markdown/00_challenge.md) 
-  
-### [Solution](https://github.com/listingslab/bitcoin-hash/blob/master/react-app/public/markdown/10_init-project.md)
+### Code Challenge 
 
-#### Install & run
+[Read the original challenge](./react-app/public/markdown/00_challenge.md) 
+  
+### Solution
+
+The [demo app](https://bitcoin-hash-demo.web.app/) consists of a React/MUI interface to the bitquery GraphQL. You can look up either an 
+address or a transaction by it's hash. Once a record is found, the user can subscribe to updates, 
+achives with @apollo's rect hooks (hopefully)
+
+[Docs](https://github.com/listingslab/bitcoin-hash/blob/master/react-app/public/markdown/)
+
+
+
+#### Install & dev
 
 > To connect to Bitquery requires an API key, which can't be exposed in a public repo and is therefore abstracted to an `.env`. Just un-zip `/react-app/env.zip` for a cheaty workaround 
 
@@ -22,7 +32,7 @@ npm test
 npm start
 ```
 
-#### Features
+#### Techstack
 
 - [Tests](./react-app/public/markdown/05_tests.md)  
     CI, Jest, GitHub Workflows, TDD. 
@@ -45,7 +55,6 @@ Secondary Colour
 ```shell
 #C09F52
 ```
-
 - Persistant Data 
     Instead of saving anything to a DB, we're using a [persisted Redux store with LocalStorage](https://github.com/listingslab/bitcoin-hash/blob/master/react-app/src/BitcoinHash/redux/store.ts). This means a returning visit does not require a DB request and even better; the entire app state is saved. As a next step I would also save the redux state to a cloud based NoSQL DB at certain times for good measure
 
