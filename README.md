@@ -7,7 +7,7 @@ Even the [Documentation](./react-app/public/markdown/)
 
 [Read the original challenge](./react-app/public/markdown/00_challenge.md) 
   
-### Solution
+### [Solution](https://github.com/listingslab/bitcoin-hash/blob/master/react-app/public/markdown/10_init-project.md)
 
 The [demo app](https://bitcoin-hash-demo.web.app/) consists of a React/MUI interface to the bitquery GraphQL. You can look up either an 
 address or a transaction by it's hash. Once a record is found, the user can subscribe to updates, 
