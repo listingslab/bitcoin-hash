@@ -3,11 +3,11 @@ import { PaletteMode, AlertColor } from "@mui/material"
 export type PwaReduxShape = {
   started: boolean
   theme: ThemeShape
-  onboarding: boolean
-  searching: boolean
   notifyer: NotifyerShape|null
+  searching: boolean
   searchMode: string
   searchStr: string|null
+  searchResults: any
   selectedCurrency: string
   currencies: Array<CurrencyShape>
   persisted: boolean

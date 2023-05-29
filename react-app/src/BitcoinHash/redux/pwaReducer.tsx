@@ -11,14 +11,14 @@ import {
 
 const initialState: PwaReduxShape = {
   started: false,
-  onboarding: true,
   searching: false,
-  notifyer: null,
   searchMode: "address",
   searchStr: "",
+  searchResults: null,
   currencies,
   selectedCurrency: "EUR",
   theme,
+  notifyer: null,
   persisted: false,
 }
 
