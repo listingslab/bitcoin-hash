@@ -17,6 +17,7 @@ import {
   Notifyer,
   usePwaSelect,
   selectPWA,
+  BitQuery,
 } from "./"
 
 const StyledFab = styled(Fab)({
@@ -51,6 +52,7 @@ export default function AppShell() {
           </Font>
         </Box>
         <Search />
+        <BitQuery />
       </Paper>
       
       <AppBar position="fixed" color="primary" sx={{ top: 'auto', bottom: 0 }}>

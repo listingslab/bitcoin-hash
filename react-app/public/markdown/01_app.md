@@ -1,21 +1,7 @@
-To query data for a hash using Bitquery's GraphQL API with Apollo in React and TypeScript, you can follow these steps:
 
-1. Install the required dependencies:
-   ```bash
-   npm install @apollo/client graphql
-   ```
 
-2. Set up your Apollo client configuration. Create a new file called `apolloClient.ts` and add the following code:
-   ```typescript
-   import { ApolloClient, InMemoryCache } from '@apollo/client';
 
-   const client = new ApolloClient({
-     uri: 'https://graphql.bitquery.io',
-     cache: new InMemoryCache(),
-   });
 
-   export default client;
-   ```
 
 3. In your React component file, import the necessary dependencies and the Apollo client instance:
    ```typescript

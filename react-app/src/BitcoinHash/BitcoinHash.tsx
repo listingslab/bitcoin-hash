@@ -16,18 +16,17 @@ import {
 } from "./"
 console.log(pJSON.name, pJSON.version)
 
-export default function BitcoinHash() {
-  
-  const client = new ApolloClient({
-    uri: "https://graphql.bitquery.io/",
-    cache: new InMemoryCache(),
-    headers: {
-      "Content-Type": "application/json",
-      // @ts-ignore
-      "X-API-KEY": process.env.REACT_APP_BITQUERY_API_KEY,
-    },
-  })
+export const client = new ApolloClient({
+  uri: "https://graphql.bitquery.io/",
+  cache: new InMemoryCache(),
+  headers: {
+    "Content-Type": "application/json",
+    // @ts-ignore
+    "X-API-KEY": process.env.REACT_APP_BITQUERY_API_KEY,
+  },
+})
 
+export default function BitcoinHash() {
   return (<>
             <ApolloProvider client={client}>
               <WrapRedux>
