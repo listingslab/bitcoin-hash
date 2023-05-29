@@ -34,5 +34,5 @@ test('Renders app', () => {
       <BitcoinHash />
     </Provider>
   );
-  expect(getByText(/Bitcoin Hash/i)).toBeInTheDocument();
+  expect(getByText(/Bitcoin#/i)).toBeInTheDocument();
 });

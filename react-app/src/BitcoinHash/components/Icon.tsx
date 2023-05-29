@@ -107,6 +107,7 @@ import SendIcon from "@mui/icons-material/Send"
 import YouIcon from "@mui/icons-material/AdminPanelSettings"
 import HostIcon from "@mui/icons-material/AppShortcut"
 import SubscribeIcon from "@mui/icons-material/Favorite"
+import HashIcon from "@mui/icons-material/Tag"
 
 export default function Icon(props: any) {
   let { icon, color } = props
@@ -118,12 +119,15 @@ export default function Icon(props: any) {
       iconFragment = <HostIcon color={color} />
       break
 
-      case "subscribe":
-        iconFragment = <SubscribeIcon color={color} />
-        break
+    case "hash":
+      iconFragment = <HashIcon color={color} />
+      break
+      
+    case "subscribe":
+      iconFragment = <SubscribeIcon color={color} />
+      break
 
-
-      case "app":
+    case "app":
       iconFragment = <HostIcon color={color} />
       break
 

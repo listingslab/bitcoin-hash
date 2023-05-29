@@ -1,39 +1,21 @@
-import { PaletteMode } from "@mui/material"
-
-export type AddressShape = {
-  thing: string
-}
-
-export type TransactionShape = {
-  thing: string
-}
-
-export type TopfiveShape = {
-  thing: string
-}
-
-export type SubscribedShape = {
-  thing: string
-}
+import { PaletteMode, AlertColor } from "@mui/material"
 
 export type PwaReduxShape = {
   started: boolean
-  persisted?: boolean
   theme: ThemeShape
+  onboarding: boolean
+  searching: boolean
+  notifyer: NotifyerShape|null
+  searchMode: string
+  searchStr: string|null
   selectedCurrency: string
   currencies: Array<CurrencyShape>
-  addresses: Array<AddressShape>
-  transactions: Array<TransactionShape>
-  subscribed: Array<SubscribedShape>
-  topfive: Array<TopfiveShape>
+  persisted: boolean
 }
 
-export type QueryShape = {
-  type?: string
-}
-
-export type SearchShape = {
-  type?: string
+export type NotifyerShape = {
+  severity: AlertColor
+  message: string
 }
 
 export type CurrencyShape = {
@@ -53,4 +35,24 @@ export type ThemeShape = {
 export interface KeyValueShape {
   key: string
   value: any
+}
+
+export type AddressShape = {
+  thing: string
+}
+
+export type TransactionShape = {
+  thing: string
+}
+
+export type TopfiveShape = {
+  thing: string
+}
+
+export type SubscribedShape = {
+  thing: string
+}
+
+export type SearchShape = {
+  type?: string
 }
