@@ -12,6 +12,7 @@ import TopFive from "./components/TopFive"
 import BitQuery from "./components/BitQuery"
 import LatestBlocks from "./components/LatestBlocks"
 import Onboarding from "./components/Onboarding"
+import Notifyer from "./components/Notifyer"
 // Theme
 import MuiTheme from "./theme/MuiTheme"
 import {makeTheme} from "./theme/makeTheme"
@@ -53,6 +54,7 @@ export {
   Subscribed,
   Transactions,
   Onboarding,
+  Notifyer,
   Addresses,
   Icon,
   Font,

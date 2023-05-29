@@ -1,7 +1,6 @@
 import React from "react"
 import {
   Box,
-  Avatar,
   CardHeader,
 } from "@mui/material"
 import {
@@ -12,7 +11,7 @@ import {
   Font,
   Search,
   Onboarding,
-  
+  Notifyer,
 } from "../"
 
 export default function AppShell() {  
@@ -32,6 +31,7 @@ export default function AppShell() {
                       </Font>}/>
               <Onboarding />
               <Search />
+              <Notifyer />
             </Box>
           </>)
 }
