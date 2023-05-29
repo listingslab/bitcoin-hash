@@ -19,6 +19,7 @@ const initialState: PwaReduxShape = {
   currencies,
   selectedCurrency: "EUR",
   theme,
+  persisted: false,
 }
 
 export const pwaSlice = createSlice({

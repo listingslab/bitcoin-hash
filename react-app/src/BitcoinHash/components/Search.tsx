@@ -81,15 +81,18 @@ export default function Search() {
     dispatch (updateSearchStr(""))
   }
 
-
   const onSearchClick = () => dispatch (search())
-  
+
+  React.useEffect(() => {
+    const {persisted, started} = pwa
+    if (persisted && !started){
+      // dispatch (updateSearchStr(""))
+    }
+  }, [pwa, dispatch])
 
   return (<>
             <Box sx={{my:0}}>
               <Card>
-
-                { searching ? <LinearProgress /> : null }
                 
                 
                 <Grid container>
@@ -145,6 +148,8 @@ export default function Search() {
                     </span>
                   </Button>
                 </CardActions> : null }
+
+                { searching ? <LinearProgress /> : null }
                 
               </Card>
             </Box>

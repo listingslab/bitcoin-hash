@@ -2,10 +2,6 @@ import React from "react"
 import {
   useTheme,
   Box,
-  Card,
-  CardContent,
-  CardHeader,
-  IconButton,
   Alert,
   AlertTitle,
   Link,
@@ -17,7 +13,6 @@ import {
   updateSearchStr,
   selectPWA,
   Font,
-  Icon,
 } from ".."
 
 export default function Onboarding() {

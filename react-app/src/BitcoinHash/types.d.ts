@@ -10,7 +10,7 @@ export type PwaReduxShape = {
   searchStr: string|null
   selectedCurrency: string
   currencies: Array<CurrencyShape>
-  persisted?: boolean
+  persisted: boolean
 }
 
 export type NotifyerShape = {

@@ -1,6 +1,6 @@
 import BitcoinHash from "./BitcoinHash"
+import AppShell from "./AppShell"
 // Components
-import AppShell from "./components/AppShell"
 import Icon from "./components/Icon"
 import {Font} from "./components/Font"
 import Search from "./components/Search"
