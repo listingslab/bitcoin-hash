@@ -19,6 +19,15 @@ import AddIcon from '@mui/icons-material/Add'
 import SearchIcon from '@mui/icons-material/Search'
 import MoreIcon from '@mui/icons-material/MoreVert'
 
+import {
+  useTheme,
+} from "@mui/material"
+
+import {
+  Icon,
+  Font,
+} from "./"
+
 const messages = [
   {
     id: 1,
@@ -26,25 +35,7 @@ const messages = [
     secondary: "I'll be in the neighbourhood this week. Let's grab a bite to eat",
     person: '/static/images/avatar/5.jpg',
   },
-  {
-    id: 2,
-    primary: 'Birthday Gift',
-    secondary: `Do you have a suggestion for a good present for John on his work
-      anniversary. I am really confused & would love your thoughts on it.`,
-    person: '/static/images/avatar/1.jpg',
-  },
-  {
-    id: 3,
-    primary: 'Recipe to try',
-    secondary: 'I am try out this new BBQ recipe, I think this might be amazing',
-    person: '/static/images/avatar/2.jpg',
-  },
-  {
-    id: 4,
-    primary: 'Yes!',
-    secondary: 'I have the tickets to the ReactConf for this year.',
-    person: '/static/images/avatar/3.jpg',
-  },
+ 
   {
     id: 5,
     primary: "Doctor's Appointment",
@@ -78,13 +69,20 @@ const StyledFab = styled(Fab)({
 })
 
 export default function AppShell() {
+
+  const theme = useTheme()
+  const titleColor = theme.palette.secondary.main
+
+
   return (
     <React.Fragment>
       <CssBaseline />
-      <Paper square sx={{ pb: '50px' }}>
-        <Typography variant="h5" gutterBottom component="div" sx={{ p: 2, pb: 0 }}>
-          Inbox
-        </Typography>
+      <Paper square sx={{ pb: '50px', mt: 2 }}>
+        <Box sx={{ p: 2, pb: 0 }}>
+          <Font variant="giant" color={titleColor}>
+            Bitcoin#
+          </Font>
+        </Box>
         <List sx={{ mb: 2 }}>
           {messages.map(({ id, primary, secondary, person }) => (
             <React.Fragment key={id}>
@@ -114,7 +112,7 @@ export default function AppShell() {
             <MenuIcon />
           </IconButton>
           <StyledFab color="secondary" aria-label="add">
-            <AddIcon />
+            <Icon icon="rocket" />
           </StyledFab>
           <Box sx={{ flexGrow: 1 }} />
           <IconButton color="inherit">
