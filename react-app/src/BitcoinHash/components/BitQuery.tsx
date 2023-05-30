@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useQuery, gql } from '@apollo/client';
-import {client} from "../BitcoinHash"
+// import {client} from "../BitcoinHash"
 
 const GET_HASH_DATA = gql`
 query ($network: BitcoinNetwork!, $limit: Int!, $offset: Int!, $from: ISO8601DateTime, $till: ISO8601DateTime) {
@@ -32,19 +32,19 @@ query ($network: BitcoinNetwork!, $limit: Int!, $offset: Int!, $from: ISO8601Dat
 
 `
 
-function getHashData(hash: string) {
-  return client.query({
-    query: GET_HASH_DATA,
-    variables: {
-      "limit": 1,
-      "offset": 0,
-      "network": "bitcoin",
-      "from": "2023-05-22",
-      "till": "2023-05-29T23:59:59",
-      "dateFormat": "%Y-%m-%d"
-    },
-  });
-}
+// function getHashData(hash: string) {
+//   return client.query({
+//     query: GET_HASH_DATA,
+//     variables: {
+//       "limit": 1,
+//       "offset": 0,
+//       "network": "bitcoin",
+//       "from": "2023-05-22",
+//       "till": "2023-05-29T23:59:59",
+//       "dateFormat": "%Y-%m-%d"
+//     },
+//   });
+// }
 
 function BitQuery(): JSX.Element {
   const { loading, error, data } = useQuery(GET_HASH_DATA, {

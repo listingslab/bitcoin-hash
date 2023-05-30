@@ -1,13 +1,9 @@
 import * as React from 'react'
-import { 
-  Avatar,
+import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
   Box,
-  Button,
-  Grid,
-  CardMedia,
 } from "@mui/material"
 import { 
   Icon,

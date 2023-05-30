@@ -1,8 +1,8 @@
 import { setPwaKey } from "../.."
-import { useQuery, gql } from '@apollo/client';
+import { gql } from '@apollo/client';
 import {client} from "../../BitcoinHash"
 
-const GET_HASH_DATA = gql`
+const GET_TRANSACTION_DATA = gql`
 query ($network: BitcoinNetwork!, $limit: Int!, $hash: String) {
   bitcoin(network: $network) {
     transactions(
@@ -29,14 +29,13 @@ query ($network: BitcoinNetwork!, $limit: Int!, $hash: String) {
 }
 `
 
-function getHashData(hash: string) {
+function getTransactionData(hash: string) {
   return client.query({
-    query: GET_HASH_DATA,
+    query: GET_TRANSACTION_DATA,
     variables: {
       hash,
       "limit": 1,
       "network": "bitcoin",
-      "dateFormat": "%Y-%m-%d"
     },
   });
 }
@@ -47,7 +46,7 @@ export const searchTransactions = (hash: string): any =>
     try {
       console.log("searchTransactions", hash)
       dispatch(setPwaKey({ key: "searching", value: true }))
-      const data = await getHashData(hash)
+      const data = await getTransactionData(hash)
       const {transactions} = data.data.bitcoin
       if (!transactions.length){
         dispatch(setPwaKey({ key: "notifyer", value: {

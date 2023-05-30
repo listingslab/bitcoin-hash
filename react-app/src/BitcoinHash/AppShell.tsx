@@ -1,6 +1,5 @@
 import * as React from 'react'
 import {
-  useTheme,
   styled,
   CssBaseline,
   Box,
@@ -30,10 +29,6 @@ const StyledFab = styled(Fab)({
 })
 
 export default function AppShell() {
-  
-
-  const theme = useTheme()
-  const titleColor = theme.palette.primary.main
   const pwa = usePwaSelect(selectPWA)
   const { 
     searching, 
