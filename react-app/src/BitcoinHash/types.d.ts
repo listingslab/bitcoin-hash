@@ -2,6 +2,7 @@ import { PaletteMode, AlertColor } from "@mui/material"
 
 export type PwaReduxShape = {
   started: boolean
+  lastUpdate: number
   transactions: Array<TransactionShape>
   theme: ThemeShape
   notifyer: NotifyerShape|null
@@ -15,13 +16,13 @@ export type PwaReduxShape = {
 
 export type TransactionShape = {
   hash: any
-  received: any
-  status: any
-  size: any
-  confirmations: any
-  input: any
-  output: any
-  fees: any
+  received?: any
+  status?: any
+  size?: any
+  confirmations?: any
+  input?: any
+  output?: any
+  fees?: any
 }
 
 export type AddressShape = {

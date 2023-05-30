@@ -43,20 +43,32 @@ function getTransactionData() {
   });
 }
 
-export const getTransactions = (): any =>
+export const updateTransactions = (): any =>
   async (dispatch: any) => {
     try {
       dispatch(setPwaKey({ key: "searching", value: true }))
+      dispatch(setPwaKey({ key: "transactions", value: [] }))
+
       const data = await getTransactionData()
       const {transactions} = data.data.bitcoin
+
+      console.log("transactions", transactions.length)
       let t: Array<TransactionShape> = []
       if (transactions.length){
-        
         for (let i=0; i<transactions.length; i++){
+          
+            t.push({
+              hash: transactions[i].hash,
+            })
           if(i === 1){
-            console.log("transactions[i]", transactions[i])
+            console.log("transactions[i]", transactions[i].hash)
           }
         }
+        dispatch(setPwaKey({ key: "transactions", value: t }))
+        dispatch(setPwaKey({ key: "notifyer", value: {
+          severity: "success",
+          message: `Updated OK`
+        }}))
       } else {
         dispatch(setPwaKey({ key: "notifyer", value: {
           severity: "error",
@@ -65,8 +77,8 @@ export const getTransactions = (): any =>
       }
 
       dispatch(setPwaKey({ key: "searching", value: false }))
-      dispatch(setPwaKey({ key: "transactions", value: transactions }))        
+           
     } catch (error: any) {
-      console.log("Action error: getTransactions", error)
+      console.log("Action error: updateTransactions", error)
     }
 }

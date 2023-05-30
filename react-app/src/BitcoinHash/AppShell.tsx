@@ -16,7 +16,7 @@ import {
   ListTransactions,
   Icon,
   Notifyer,
-  getTransactions,
+  // updateTransactions,
 } from "./"
 
 const StyledFab = styled(Fab)({
@@ -34,13 +34,13 @@ export default function AppShell() {
 
   React.useEffect(() => {
     const {started} = pwa
-    dispatch(getTransactions())
     if (!started){
       // @ts-ignore
       dispatch(startApp())
     }
   }, [pwa, dispatch])
 
+  
   return (<>
     <CssBaseline />
     <ListTransactions />

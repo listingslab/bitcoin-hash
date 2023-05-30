@@ -25,7 +25,7 @@ import { startApp } from "./redux/actions/startApp"
 import { setCurrency } from "./redux/actions/setCurrency"
 import { scrollTop } from "./redux/actions/scrollTop"
 import { updateSearchStr } from "./redux/actions/updateSearchStr"
-import { getTransactions } from "./redux/actions/getTransactions"
+import { updateTransactions } from "./redux/actions/updateTransactions"
 import { searchTransactions } from "./redux/actions/searchTransactions"
 import { toggleNotifyer } from "./redux/actions/toggleNotifyer"
 
@@ -49,7 +49,7 @@ export {
   updateSearchStr,
   toggleNotifyer,
   searchTransactions,
-  getTransactions,
+  updateTransactions,
   Search,
   CurrencyMenu,
   Notifyer,

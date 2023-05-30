@@ -1,4 +1,5 @@
 import * as React from "react"
+import moment from "moment"
 import {
   Accordion,
   AccordionSummary,
@@ -10,10 +11,13 @@ import {
   Icon,
   Font,
   usePwaSelect,
+  // usePwaDispatch,
+  // updateTransactions,
   selectPWA,
 } from ".."
 
 export default function ListTransactions() {
+  // const dispatch = usePwaDispatch()
   const [expanded, setExpanded] = React.useState<string | false>("transaction-acc")
 
   const handleChange =
@@ -22,7 +26,7 @@ export default function ListTransactions() {
     }
 
   const pwa = usePwaSelect(selectPWA)
-  const {transactions, searching} = pwa
+  const {transactions, searching, lastUpdate} = pwa
 
   return (
     <Box sx={{mt:1, mb: "90px"}}>
@@ -36,20 +40,19 @@ export default function ListTransactions() {
           <Box sx={{ flexShrink: 1, mr: 2 }}>
             <Icon icon="transaction" />
           </Box>
-          <Box sx={{ mt:0.25 }}>
+          <Box sx={{ mt:-1 }}>
             <Font variant="title">
-                Blockchain Transactions
+                Last 50 Blockchain Transactions
+            </Font>
+            <Font variant="small">
+              Updated {moment(lastUpdate).fromNow()}
             </Font>
           </Box>
         </AccordionSummary>
-
         <AccordionDetails>
-          
-        
           <pre style={{fontSize:10}}>
             {JSON.stringify(transactions, null, 2)}
           </pre>
-
         </AccordionDetails>
       </Accordion>
     </Box>
