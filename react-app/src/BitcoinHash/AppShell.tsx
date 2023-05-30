@@ -5,18 +5,16 @@ import {
   Box,
   AppBar,
   Toolbar,
-  Paper,
   Fab,
   LinearProgress,
 } from "@mui/material"
 import {
   Icon,
   CurrencyMenu,
-  AccordionTestData,
-  Search,
   Notifyer,
   usePwaSelect,
   selectPWA,
+  scrollTop,
 } from "./"
 
 const StyledFab = styled(Fab)({
@@ -36,12 +34,7 @@ export default function AppShell() {
 
   return (<>
       <CssBaseline />
-      <Paper sx={{ p: 2, mt: 2 }}>
-        {searching ? <LinearProgress color="secondary"/> : 
-        <Box sx={{height: 4}} /> }
-        <Search />
-      </Paper>
-      <AccordionTestData />
+      {searching ? <LinearProgress color="secondary"/> : <Box sx={{height: 4}} /> }
       
       <AppBar position="fixed" color="primary" sx={{ top: 'auto', bottom: 0 }}>
         <Toolbar>
@@ -49,20 +42,13 @@ export default function AppShell() {
             color="primary"
             onClick={(e: React.MouseEvent) => {
               e.preventDefault()
-              window.open("https://github.com/listingslab/bitcoin-hash", "_blank")
+              // window.open("https://github.com/listingslab/bitcoin-hash", "_blank")
             }}>
-            <Icon icon="github" />
+            <Icon icon="up" />
           </StyledFab>
           <Box sx={{ flexGrow: 1 }} />
           <CurrencyMenu />
-          {/* <IconButton 
-            color="inherit" 
-            onClick={(e: React.MouseEvent) => {
-              e.preventDefault()
-              console.log("Search")
-            }}>
-            <Icon icon="menu" />
-          </IconButton> */}
+          
         </Toolbar>
       </AppBar>
       <Notifyer />

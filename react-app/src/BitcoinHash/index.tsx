@@ -5,9 +5,9 @@ import Icon from "./components/Icon"
 import {Font} from "./components/Font"
 import Search from "./components/Search"
 import CurrencyMenu from "./components/CurrencyMenu"
-import BitQuery from "./components/BitQuery"
 import Notifyer from "./components/Notifyer"
 import AccordionTestData from "./components/AccordionTestData"
+import ListTransactions from "./components/ListTransactions"
 // Theme
 import MuiTheme from "./theme/MuiTheme"
 import {makeTheme} from "./theme/makeTheme"
@@ -23,7 +23,7 @@ import {store} from "./redux/store"
 import {persistor} from "./redux/store"
 import { startApp } from "./redux/actions/startApp"
 import { setCurrency } from "./redux/actions/setCurrency"
-import { getBitquery } from "./redux/actions/getBitquery"
+import { scrollTop } from "./redux/actions/scrollTop"
 import { updateSearchStrT } from "./redux/actions/updateSearchStrT"
 import { updateSearchStrA } from "./redux/actions/updateSearchStrA"
 import { searchAddresses } from "./redux/actions/searchAddresses"
@@ -46,17 +46,17 @@ export {
   selectPWA,
   startApp,
   setCurrency,
-  getBitquery,
+  scrollTop,
   updateSearchStrT,
   updateSearchStrA,
   toggleNotifyer,
   searchTransactions,
   searchAddresses,
   Search,
-  BitQuery,
   CurrencyMenu,
   Notifyer,
   AccordionTestData,
+  ListTransactions,
   Icon,
   Font,
 }
