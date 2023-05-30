@@ -1,23 +1,22 @@
 import * as React from 'react'
 import {
-  useTheme,
   styled,
   CssBaseline,
   Box,
   AppBar,
   Toolbar,
-  Paper,
   Fab,
-  LinearProgress,
 } from "@mui/material"
 import {
-  Icon,
-  Font,
-  Search,
-  Notifyer,
   usePwaSelect,
+  usePwaDispatch,
   selectPWA,
-  BitQuery,
+  scrollTop,
+  startApp,
+  ListTransactions,
+  Icon,
+  Notifyer,
+  // updateTransactions,
 } from "./"
 
 const StyledFab = styled(Fab)({
@@ -30,53 +29,35 @@ const StyledFab = styled(Fab)({
 })
 
 export default function AppShell() {
-  
-
-  const theme = useTheme()
-  const titleColor = theme.palette.primary.main
   const pwa = usePwaSelect(selectPWA)
-  const { 
-    searching, 
-  } = pwa
+  const dispatch = usePwaDispatch()
 
+  React.useEffect(() => {
+    const {started} = pwa
+    if (!started){
+      // @ts-ignore
+      dispatch(startApp())
+    }
+  }, [pwa, dispatch])
+
+  
   return (<>
-      <CssBaseline />
-      <Paper square sx={{ pb: '50px', mt: 2 }}>
-
-        {searching ? <LinearProgress color="secondary"/> : 
-        <Box sx={{height: 4}} /> }
-
-        <Box sx={{ p: 2, pb: 0, mb:2 }}>
-          <Font variant="title" color={titleColor}>
-            Bitcoin#
-          </Font>
-        </Box>
-        <Search />
-        <BitQuery />
-      </Paper>
-      
-      <AppBar position="fixed" color="primary" sx={{ top: 'auto', bottom: 0 }}>
-        <Toolbar>
-          <StyledFab 
-            color="primary"
-            onClick={(e: React.MouseEvent) => {
-              e.preventDefault()
-              window.open("https://github.com/listingslab/bitcoin-hash", "_blank")
-            }}>
-            <Icon icon="github" />
-          </StyledFab>
-          <Box sx={{ flexGrow: 1 }} />
-          {/* <IconButton 
-            color="inherit" 
-            onClick={(e: React.MouseEvent) => {
-              e.preventDefault()
-              console.log("Search")
-            }}>
-            <Icon icon="menu" />
-          </IconButton> */}
-        </Toolbar>
-      </AppBar>
-      <Notifyer />
-    </>
+    <CssBaseline />
+    <ListTransactions />
+    <AppBar position="fixed" color="primary" sx={{ top: 'auto', bottom: 0 }}>
+      <Toolbar>
+        <StyledFab 
+          color="primary"
+          onClick={(e: React.MouseEvent) => {
+            e.preventDefault()
+            dispatch(scrollTop())
+          }}>
+          <Icon icon="up" />
+        </StyledFab>
+        <Box sx={{ flexGrow: 1 }} />
+      </Toolbar>
+    </AppBar>
+    <Notifyer />
+  </>
   )
 }
