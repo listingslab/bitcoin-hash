@@ -11,12 +11,10 @@ import {
 
 const initialState: PwaReduxShape = {
   started: false,
+  transactions: [],
   searching: false,
   searchStr: "",
-  searchStrT: "",
-  searchResultsT: null,
-  searchStrA: "",
-  searchResultsA: null,
+  searchResults: null,
   currencies,
   selectedCurrency: "EUR",
   theme,

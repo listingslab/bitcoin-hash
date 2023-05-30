@@ -1,9 +1,9 @@
-export const scrollTop = () =>
-  async (/*dispatch: any*/) => {
+export const scrollTop =
+  (): any =>
+  async (dispatch: any) => {
     try {
-        console.log("scrollTop")
-        // dispatch(setPwaKey({ key: "currency", value: currency }))
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     } catch (error: any) {
-      console.log("Action error: getBitquery", error)
+      console.log("Action error: scrollTop", error)
     }
   }

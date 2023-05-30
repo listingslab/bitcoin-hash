@@ -6,15 +6,17 @@ import {
   AppBar,
   Toolbar,
   Fab,
-  LinearProgress,
 } from "@mui/material"
 import {
-  Icon,
-  CurrencyMenu,
-  Notifyer,
   usePwaSelect,
+  usePwaDispatch,
   selectPWA,
   scrollTop,
+  startApp,
+  ListTransactions,
+  Icon,
+  Notifyer,
+  getTransactions,
 } from "./"
 
 const StyledFab = styled(Fab)({
@@ -28,30 +30,34 @@ const StyledFab = styled(Fab)({
 
 export default function AppShell() {
   const pwa = usePwaSelect(selectPWA)
-  const { 
-    searching, 
-  } = pwa
+  const dispatch = usePwaDispatch()
+
+  React.useEffect(() => {
+    const {started} = pwa
+    dispatch(getTransactions())
+    if (!started){
+      // @ts-ignore
+      dispatch(startApp())
+    }
+  }, [pwa, dispatch])
 
   return (<>
-      <CssBaseline />
-      {searching ? <LinearProgress color="secondary"/> : <Box sx={{height: 4}} /> }
-      
-      <AppBar position="fixed" color="primary" sx={{ top: 'auto', bottom: 0 }}>
-        <Toolbar>
-          <StyledFab 
-            color="primary"
-            onClick={(e: React.MouseEvent) => {
-              e.preventDefault()
-              // window.open("https://github.com/listingslab/bitcoin-hash", "_blank")
-            }}>
-            <Icon icon="up" />
-          </StyledFab>
-          <Box sx={{ flexGrow: 1 }} />
-          <CurrencyMenu />
-          
-        </Toolbar>
-      </AppBar>
-      <Notifyer />
-    </>
+    <CssBaseline />
+    <ListTransactions />
+    <AppBar position="fixed" color="primary" sx={{ top: 'auto', bottom: 0 }}>
+      <Toolbar>
+        <StyledFab 
+          color="primary"
+          onClick={(e: React.MouseEvent) => {
+            e.preventDefault()
+            dispatch(scrollTop())
+          }}>
+          <Icon icon="up" />
+        </StyledFab>
+        <Box sx={{ flexGrow: 1 }} />
+      </Toolbar>
+    </AppBar>
+    <Notifyer />
+  </>
   )
 }

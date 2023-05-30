@@ -2,17 +2,34 @@ import { PaletteMode, AlertColor } from "@mui/material"
 
 export type PwaReduxShape = {
   started: boolean
+  transactions: Array<TransactionShape>
   theme: ThemeShape
   notifyer: NotifyerShape|null
   searching: boolean
   searchStr: string
-  searchStrT: string
-  searchStrA: string
-  searchResultsA: any
-  searchResultsT: any
+  searchResults: any
   selectedCurrency: string
   currencies: Array<CurrencyShape>
   persisted: boolean
+}
+
+export type TransactionShape = {
+  hash: any
+  received: any
+  status: any
+  size: any
+  confirmations: any
+  input: any
+  output: any
+  fees: any
+}
+
+export type AddressShape = {
+  confirmedTransactions: any
+  received: any
+  spent: any
+  unspent: any
+  balance: any
 }
 
 export type NotifyerShape = {
@@ -39,22 +56,4 @@ export interface KeyValueShape {
   value: any
 }
 
-export type AddressShape = {
-  thing: string
-}
 
-export type TransactionShape = {
-  thing: string
-}
-
-export type TopfiveShape = {
-  thing: string
-}
-
-export type SubscribedShape = {
-  thing: string
-}
-
-export type SearchShape = {
-  type?: string
-}

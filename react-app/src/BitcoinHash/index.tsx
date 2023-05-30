@@ -24,9 +24,8 @@ import {persistor} from "./redux/store"
 import { startApp } from "./redux/actions/startApp"
 import { setCurrency } from "./redux/actions/setCurrency"
 import { scrollTop } from "./redux/actions/scrollTop"
-import { updateSearchStrT } from "./redux/actions/updateSearchStrT"
-import { updateSearchStrA } from "./redux/actions/updateSearchStrA"
-import { searchAddresses } from "./redux/actions/searchAddresses"
+import { updateSearchStr } from "./redux/actions/updateSearchStr"
+import { getTransactions } from "./redux/actions/getTransactions"
 import { searchTransactions } from "./redux/actions/searchTransactions"
 import { toggleNotifyer } from "./redux/actions/toggleNotifyer"
 
@@ -47,11 +46,10 @@ export {
   startApp,
   setCurrency,
   scrollTop,
-  updateSearchStrT,
-  updateSearchStrA,
+  updateSearchStr,
   toggleNotifyer,
   searchTransactions,
-  searchAddresses,
+  getTransactions,
   Search,
   CurrencyMenu,
   Notifyer,

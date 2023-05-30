@@ -11,9 +11,7 @@ import {
   usePwaSelect,
   usePwaDispatch,
   searchTransactions,
-  searchAddresses,
-  updateSearchStrA,
-  updateSearchStrT,
+  updateSearchStr,
   selectPWA,
   Icon,
 } from "../"
@@ -57,100 +55,47 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 export default function Search() {  
   const pwa = usePwaSelect(selectPWA)
   const dispatch = usePwaDispatch()
-  const {searchStrT, searchResultsT, searchStrA, searchResultsA, searching} = pwa
+  const {searchStr, searchResults, searching} = pwa
   return (<>
-
-<Grid container>
-  <Grid item xs={12} md={6}>
-  <Grid container>
-      <Grid item sx={{flexGrow:1}}>
-        <Box sx={{mx: 1, pl:1}}>
-        <SearchBox>
-          <SearchIconWrapper>
-            <Icon icon="transaction" color="secondary" />
-          </SearchIconWrapper>
-          <StyledInputBase
-            disabled={!searching ? false : true}
-            fullWidth
-            placeholder={`Search transactions...`}
-            value={searchStrT}
-            onChange={(e: any) => dispatch (updateSearchStrT(e.target.value))}
-          />
-        </SearchBox>
-        </Box>
-      </Grid>
-      <Grid item>
-        <Box sx={{mx: 0}}>
-          <IconButton
-            color="secondary"
-            disabled={searchStrT !== "" || searching ? false : true}
-            onClick={() => {
-              dispatch (updateSearchStrT(""))
-            }}>
-            <Icon icon="close"/>
-          </IconButton>
-          <IconButton
-              sx={{mr: 2}}
-            color="secondary"
-            disabled={searchStrT === "" || searching ? true : false}
-            onClick={() => dispatch (searchTransactions(searchStrT))}>
-            <Icon icon="search"/>
-          </IconButton>
-        </Box>
-
-        
-        
-      </Grid>
-      
-      <pre>searchResultsT {JSON.stringify(searchResultsT, null, 2)}</pre>
-    </Grid>
-  </Grid>
-
-  <Grid item xs={12} md={6}>
     <Grid container>
-            <Grid item sx={{flexGrow:1}}>
-              <Box sx={{mx: 1, pl:1}}>
-              <SearchBox>
-                <SearchIconWrapper>
-                  <Icon icon="address" color="secondary" />
-                </SearchIconWrapper>
-                <StyledInputBase
-                  disabled={!searching ? false : true}
-                  fullWidth
-                  placeholder={`Search addresses...`}
-                  value={searchStrA}
-                  onChange={(e: any) => dispatch (updateSearchStrA(e.target.value))}
-                />
-              </SearchBox>
-              </Box>
-            </Grid>
-            <Grid item>
-              <Box sx={{mx: 0}}>
-                <IconButton
-                  color="secondary"
-                  disabled={searchStrA !== "" || searching ? false : true}
-                  onClick={() => {
-                    dispatch (updateSearchStrA(""))
-                  }}>
-                  <Icon icon="close"/>
-                </IconButton>
-                <IconButton
-                    sx={{mr: 2}}
-                  color="secondary"
-                  disabled={searchStrA === "" || searching ? true : false}
-                  onClick={() => dispatch (searchAddresses(searchStrA))}>
-                  <Icon icon="search"/>
-                </IconButton>
-              </Box>
-            </Grid>
-            
-          </Grid>
-          
-          <pre>searchResultsA {JSON.stringify(searchResultsA, null, 2)}</pre>
+        <Grid item sx={{flexGrow:1}}>
+          <Box sx={{mx: 1, pl:1}}>
+          <SearchBox>
+            <SearchIconWrapper>
+              <Icon icon="transaction" color="secondary" />
+            </SearchIconWrapper>
+            <StyledInputBase
+              disabled={!searching ? false : true}
+              fullWidth
+              placeholder={`Search transactions...`}
+              value={searchStr}
+              onChange={(e: any) => dispatch (updateSearchStr(e.target.value))}
+            />
+          </SearchBox>
+          </Box>
+        </Grid>
+        <Grid item>
+          <Box sx={{mx: 0}}>
+            <IconButton
+              color="secondary"
+              disabled={searchStr !== "" || searching ? false : true}
+              onClick={() => {
+                dispatch (updateSearchStr(""))
+              }}>
+              <Icon icon="close"/>
+            </IconButton>
+            <IconButton
+                sx={{mr: 2}}
+              color="secondary"
+              disabled={searchStr === "" || searching ? true : false}
+              onClick={() => dispatch (searchTransactions(searchStr))}>
+              <Icon icon="search"/>
+            </IconButton>
+          </Box>
         </Grid>
         
-      </Grid>
-          
+        <pre>searchResults {JSON.stringify(searchResults, null, 2)}</pre>
+      </Grid>          
     </>
   )
 }
